@@ -172,6 +172,7 @@ function updateWhatsAppLinks(rawPhone) {
 function initPortfolio() {
   renderCustomUploadedWorks();
   refreshPortfolioFilters();
+  initPortfolioMobileExpander();
 }
 
 function renderCustomUploadedWorks() {
@@ -233,6 +234,23 @@ function refreshPortfolioFilters() {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
+      const toggleBox = document.getElementById('portfolio-mobile-toggle-box');
+      const grid = document.getElementById('portfolio-grid');
+
+      if (target !== 'all') {
+        // Category filter active: unhide matching items on mobile and hide toggle button
+        if (toggleBox) toggleBox.style.display = 'none';
+        if (grid) grid.classList.add('portfolio-all-revealed');
+      } else {
+        // 'All' selected: restore toggle button and respect user expanded state
+        if (toggleBox) toggleBox.style.display = '';
+        const toggleText = document.getElementById('mobile-toggle-text');
+        const isUserExpanded = toggleText && toggleText.textContent.includes('Highlights');
+        if (grid && !isUserExpanded) {
+          grid.classList.remove('portfolio-all-revealed');
+        }
+      }
+
       items.forEach(item => {
         const cats = (item.getAttribute('data-category') || '').trim().split(/\s+/);
         if (target === 'all' || cats.includes(target)) {
@@ -262,6 +280,33 @@ function refreshPortfolioFilters() {
       card.addEventListener('mouseleave', () => {
         preview.pause();
       });
+    }
+  });
+}
+
+function initPortfolioMobileExpander() {
+  const toggleBtn = document.getElementById('portfolio-mobile-toggle-btn');
+  const grid = document.getElementById('portfolio-grid');
+  const toggleText = document.getElementById('mobile-toggle-text');
+  const chevron = document.getElementById('mobile-toggle-chevron');
+  if (!toggleBtn || !grid) return;
+
+  toggleBtn.addEventListener('click', () => {
+    playShutterSound();
+    const isExpanded = grid.classList.toggle('portfolio-all-revealed');
+
+    if (isExpanded) {
+      if (toggleText) toggleText.textContent = 'Show Top Highlights';
+      if (chevron) chevron.classList.add('rotate-180');
+    } else {
+      if (toggleText) toggleText.textContent = 'Explore All 17 Cinema Frames (+11 More)';
+      if (chevron) chevron.classList.remove('rotate-180');
+
+      // Smooth scroll back to portfolio section header so user maintains orientation
+      const portfolioSec = document.getElementById('portfolio');
+      if (portfolioSec) {
+        portfolioSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   });
 }

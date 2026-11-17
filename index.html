@@ -444,25 +444,25 @@
         </p>
       </div>
 
-      <!-- Filter Tabs -->
-      <div class="flex flex-wrap items-center gap-2">
-        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="all">
+      <!-- Filter Tabs (Smooth horizontal touch-swipe pill bar on mobile, wrapped on desktop) -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 pt-1 max-w-full -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
+        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="all">
           <span>All</span>
           <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">17</span>
         </button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="cinematography">
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="cinematography">
           <span>Cinematography</span>
           <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">5</span>
         </button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="photography">
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="photography">
           <span>Photography</span>
           <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">6</span>
         </button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="commercial">
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="commercial">
           <span>Commercial</span>
           <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">5</span>
         </button>
-        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="editing">
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="editing">
           <span>Video Editing</span>
           <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">2</span>
         </button>
@@ -519,10 +519,10 @@
     </div>
 
     <!-- Portfolio Grid -->
-    <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="portfolio-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
 
       <!-- ITEM 1: Cinematography (The Golden Wake - Widescreen Feature) -->
-      <div class="portfolio-card aspect-[16/10] sm:col-span-2 lg:col-span-2" 
+      <div class="portfolio-card aspect-[16/10] col-span-2 sm:col-span-2 lg:col-span-2" 
            data-category="cinematography"
            data-title="The Golden Wake | Cinematic Maritime Motion"
            data-category-label="Cinematography &bull; 60fps Motion Study"
@@ -663,7 +663,7 @@
       </div>
 
       <!-- ITEM 7: Commercial (Artisan Gourmet Kulfi / Popsicle Confections) -->
-      <div class="portfolio-card aspect-[16/10]" 
+      <div class="portfolio-card aspect-[16/10] mobile-collapsed" 
            data-category="commercial"
            data-title="Artisan Confections | Gourmet Popsicle & Kulfi Showcase"
            data-category-label="Commercial &bull; Culinary & Food Styling"
@@ -685,7 +685,7 @@
       </div>
 
       <!-- ITEM 8: Commercial Video Editing (Master Cut & Sound Design) -->
-      <div class="portfolio-card aspect-[4/5] relative group" 
+      <div class="portfolio-card aspect-[4/5] relative group mobile-collapsed" 
            data-category="commercial editing"
            data-title="Commercial Video Edit | High-Retention Master Reel"
            data-category-label="Commercial &bull; Video Editing"
@@ -724,7 +724,7 @@
       </div>
 
       <!-- ITEM 9: Photography (Luxury Wedding Stage Architecture) -->
-      <div class="portfolio-card aspect-[16/10]" 
+      <div class="portfolio-card aspect-[16/10] mobile-collapsed" 
            data-category="photography"
            data-title="Golden Splendor | Luxury Stage Architecture"
            data-category-label="Photography &bull; Stage & Ambience"
@@ -746,7 +746,7 @@
       </div>
 
       <!-- ITEM 9: Cinematography (Quiet Hours - Feline Ambient Study) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="cinematography"
            data-title="Quiet Hours | Ambient Narrative Frame"
            data-category-label="Cinematography &bull; Narrative Mood"
@@ -771,7 +771,7 @@
       </div>
 
       <!-- ITEM 10: Photography (Urban Wildlife Raptor Study) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="photography"
            data-title="Sovereign Gaze | Urban Raptor Study"
            data-category-label="Photography &bull; Wildlife & Urban Mood"
@@ -793,7 +793,7 @@
       </div>
 
       <!-- ITEM 12: Commercial (Belgian Gold Waffles Macro Product Ad) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="commercial"
            data-title="Belgian Gold Waffles | Gourmet Pastry & Macro Product Ad"
            data-category-label="Commercial &bull; Macro Food & Product"
@@ -815,7 +815,7 @@
       </div>
 
       <!-- ITEM 13: Cinematography (Imperial Stone - Colonial Heritage Architecture) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="cinematography"
            data-title="Imperial Stone | Heritage Cinema Frame"
            data-category-label="Cinematography &bull; Period & Architectural Film"
@@ -840,7 +840,7 @@
       </div>
 
       <!-- ITEM 14: Commercial (Luminous Elegance - Chandelier & Ambient Interior) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="commercial"
            data-title="Luminous Elegance | Architectural Interior & Lighting Design"
            data-category-label="Commercial &bull; Hospitality & Interior"
@@ -862,7 +862,7 @@
       </div>
 
       <!-- ITEM 15: Photography (Royal Banquet Grand Hall) -->
-      <div class="portfolio-card aspect-[16/10]" 
+      <div class="portfolio-card aspect-[16/10] mobile-collapsed" 
            data-category="photography"
            data-title="The Grand Ballroom | Architectural Interior"
            data-category-label="Photography &bull; Interior & Architecture"
@@ -884,7 +884,7 @@
       </div>
 
       <!-- ITEM 16: Photography (Amber Sentinel - Golden Hour Eagle Study) -->
-      <div class="portfolio-card aspect-[4/5]" 
+      <div class="portfolio-card aspect-[4/5] mobile-collapsed" 
            data-category="photography"
            data-title="Amber Sentinel | Golden Hour Avian Study"
            data-category-label="Photography &bull; Golden Hour Wildlife"
@@ -906,7 +906,7 @@
       </div>
 
       <!-- ITEM 17: Editing (Color Grading Suite) -->
-      <div class="portfolio-card aspect-[16/10]" 
+      <div class="portfolio-card aspect-[16/10] mobile-collapsed" 
            data-category="editing"
            data-title="The Color Suite | DaVinci Grading Workflow"
            data-category-label="Editing &bull; Post-Production"
@@ -928,8 +928,17 @@
       </div>
 
     </div>
-  </section>
 
+    <!-- Mobile Progressive Disclosure Expander Button (Visible on mobile < 640px) -->
+    <div id="portfolio-mobile-toggle-box" class="mt-8 flex justify-center sm:hidden">
+      <button id="portfolio-mobile-toggle-btn" 
+              class="w-full max-w-sm py-3.5 px-6 rounded-2xl bg-brand-surface/90 hover:bg-brand-card text-brand-gold border border-brand-gold/40 shadow-xl flex items-center justify-center gap-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-all active:scale-95 group">
+        <i data-lucide="layout-grid" class="w-4 h-4 text-brand-gold"></i>
+        <span id="mobile-toggle-text">Explore All 17 Cinema Frames (+11 More)</span>
+        <i data-lucide="chevron-down" id="mobile-toggle-chevron" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
+      </button>
+    </div>
+  </section>
 
   <!-- =========================================================================
        COMMERCIAL BRAND PRODUCTIONS & DAVINCI COLOR SUITE
@@ -1049,7 +1058,7 @@
     <!-- =======================================================================
          THE 4-PIECE COMMERCIAL CAMPAIGN LOOKBOOK
          ======================================================================= -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 mb-16">
       
       <!-- Card 1: Golden Desserts Storefront -->
       <div class="commercial-lookbook-card group">

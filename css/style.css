@@ -1640,3 +1640,62 @@ body.lut-falsecolor {
     cursor: ew-resize !important;
   }
 }
+
+/* ==========================================================================
+   MOBILE PORTFOLIO COMPACT 2-COLUMN GRID & PROGRESSIVE DISCLOSURE (< 640px)
+   ========================================================================== */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (max-width: 639px) {
+  /* Hide collapsed items on mobile unless portfolio-all-revealed is active */
+  #portfolio-grid:not(.portfolio-all-revealed) .portfolio-card.mobile-collapsed {
+    display: none !important;
+  }
+
+  /* Compact rounded corners on mobile cards */
+  .portfolio-card {
+    border-radius: 10px;
+  }
+
+  /* Hide telemetry banner on mobile 2-column thumbnails to keep images clean & unobstructed */
+  .portfolio-card .card-hud-telemetry {
+    display: none !important;
+  }
+
+  /* Clean, persistent touch overlay on mobile cards (since phones have no hover) */
+  .portfolio-overlay {
+    opacity: 1 !important;
+    padding: 0.65rem 0.75rem !important;
+    background: linear-gradient(to top, rgba(3, 3, 5, 0.94) 0%, rgba(3, 3, 5, 0.45) 60%, transparent 100%) !important;
+  }
+
+  .portfolio-overlay .badge-gold {
+    font-size: 8px !important;
+    padding: 2px 6px !important;
+    margin-bottom: 3px !important;
+    line-height: 1.2 !important;
+  }
+
+  .portfolio-overlay h3 {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .portfolio-overlay p {
+    display: none !important;
+  }
+
+  /* Mobile touch tap feedback */
+  .portfolio-card:active {
+    transform: scale(0.97) !important;
+  }
+}
