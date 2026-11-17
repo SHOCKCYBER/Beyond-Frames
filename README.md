@@ -38,7 +38,7 @@ Look at the **bottom-left corner** of your website screen:
 
 2. **Core Sections**:
    - **Hero Section**: High-impact headline, showreel preview button, quick credentials stats ticker (100+ Projects, 4K/6K Cinema, 100% Color Graded).
-   - **2026 Showreel Pop-up Player**: Plays your highlight reel in high-definition 16:9 cinema widescreen.
+   - **Showreel Pop-up Player**: Plays your highlight reel in high-definition 16:9 cinema widescreen.
    - **Curated Portfolio Gallery**: 12+ pre-configured projects filterable by *All, Cinematography, Photography, Commercial, and Post & Grading*.
    - **Cinematic Fullscreen Lightbox**: Click any card to inspect high-resolution imagery with camera metadata (e.g., *Sony FX6, Cooke Anamorphic, A7R V*).
    - **The Art of the Cut (Video Editing Suite)**: Multi-track timeline visualizer, sound design breakdown, and multi-format deliverables (16:9 cinema widescreen, 9:16 vertical reels with dynamic subtitles, and commercial 4:5 ads).
