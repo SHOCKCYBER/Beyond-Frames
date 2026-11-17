@@ -448,7 +448,7 @@
       <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 pt-1 max-w-full -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
         <button class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="all">
           <span>All</span>
-          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">17</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">18</span>
         </button>
         <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="cinematography">
           <span>Cinematography</span>
@@ -460,11 +460,11 @@
         </button>
         <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="commercial">
           <span>Commercial</span>
-          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">5</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">6</span>
         </button>
         <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2 shrink-0 whitespace-nowrap" data-filter="editing">
           <span>Video Editing</span>
-          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">2</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">3</span>
         </button>
       </div>
     </div>
@@ -723,6 +723,45 @@
         </div>
       </div>
 
+      <!-- ITEM 8B: Commercial Video Edit II (Brand Film & Kinetic Motion) -->
+      <div class="portfolio-card aspect-[4/5] relative group mobile-collapsed" 
+           data-category="commercial editing"
+           data-title="Commercial Video Edit II | Brand Film & Kinetic Motion"
+           data-category-label="Commercial &bull; Video Editing"
+           data-gear="Premiere Pro &bull; DaVinci Resolve &bull; Sound Design Suite"
+           data-client="Commercial Brand Showcase"
+           data-video-src="assets/videos/commercial-video-editing-showcase-2.mp4">
+        <video class="absolute inset-0 w-full h-full object-cover pointer-events-none" muted loop playsinline preload="metadata">
+          <source src="assets/videos/commercial-video-editing-showcase-2.mp4#t=0.5" type="video/mp4">
+        </video>
+        
+        <!-- Interactive Hover Preview Video -->
+        <video class="hover-preview-video absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" muted loop playsinline preload="none">
+          <source src="assets/videos/commercial-video-editing-showcase-2.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video Play Icon Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-black flex items-center justify-center pulse-gold shadow-2xl transition-transform duration-300 group-hover:scale-110">
+            <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+          </div>
+        </div>
+
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> 2M 07S MASTER</span>
+          <span class="text-white/60">BRAND FILM</span>
+          <span class="text-emerald-400">SOUND DESIGN</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">COMMERCIAL EDIT II</span>
+            <span class="text-[10px] font-mono text-brand-gold">▶ CLICK TO PLAY</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Commercial Video Edit II</h3>
+          <p class="text-xs text-slate-300 mt-1">Brand Film Narrative &bull; Dynamic Motion &bull; Custom Audio Mix</p>
+        </div>
+      </div>
+
       <!-- ITEM 9: Photography (Luxury Wedding Stage Architecture) -->
       <div class="portfolio-card aspect-[16/10] mobile-collapsed" 
            data-category="photography"
@@ -934,7 +973,7 @@
       <button id="portfolio-mobile-toggle-btn" 
               class="w-full max-w-sm py-3.5 px-6 rounded-2xl bg-brand-surface/90 hover:bg-brand-card text-brand-gold border border-brand-gold/40 shadow-xl flex items-center justify-center gap-2.5 font-mono text-xs font-bold uppercase tracking-wider transition-all active:scale-95 group">
         <i data-lucide="layout-grid" class="w-4 h-4 text-brand-gold"></i>
-        <span id="mobile-toggle-text">Explore All 17 Cinema Frames (+11 More)</span>
+        <span id="mobile-toggle-text">Explore All 18 Cinema Frames (+12 More)</span>
         <i data-lucide="chevron-down" id="mobile-toggle-chevron" class="w-4 h-4 text-brand-gold transition-transform duration-300"></i>
       </button>
     </div>
@@ -1265,7 +1304,20 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
         
         <!-- Video Player Column (9:16 Vertical Reel Player) -->
-        <div class="lg:col-span-5 flex justify-center">
+        <div class="lg:col-span-5 flex flex-col items-center">
+          
+          <!-- Dual Reel Switcher Tabs -->
+          <div class="w-full max-w-[320px] mb-3 flex items-center p-1 rounded-2xl bg-black/80 border border-brand-gold/30 shadow-lg font-mono text-xs">
+            <button class="reel-switch-btn active flex-1 py-2 px-3 rounded-xl bg-brand-gold text-brand-black font-bold flex items-center justify-center gap-1.5 transition-all" data-video="assets/videos/commercial-video-editing-showcase.mp4" data-badge="41S MASTER">
+              <i data-lucide="play" class="w-3.5 h-3.5 fill-current"></i>
+              <span>REEL 01 (41S)</span>
+            </button>
+            <button class="reel-switch-btn flex-1 py-2 px-3 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 font-bold flex items-center justify-center gap-1.5 transition-all" data-video="assets/videos/commercial-video-editing-showcase-2.mp4" data-badge="2M 07S MASTER">
+              <i data-lucide="film" class="w-3.5 h-3.5 text-brand-gold"></i>
+              <span>REEL 02 (2M)</span>
+            </button>
+          </div>
+
           <div class="relative w-full max-w-[320px] rounded-[32px] p-3 bg-gradient-to-b from-brand-gold/50 via-white/10 to-brand-gold/30 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(212,175,55,0.25)]">
             <!-- Screen container with bezel -->
             <div class="relative rounded-[24px] overflow-hidden bg-black aspect-[9/16] shadow-inner group border border-white/20">
@@ -1291,7 +1343,7 @@
               <!-- Live HUD Status -->
               <div class="absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
                 <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-                <span class="text-[9px] font-mono font-bold tracking-widest uppercase text-white">COMMERCIAL EDIT</span>
+                <span id="commercial-hud-badge" class="text-[9px] font-mono font-bold tracking-widest uppercase text-white">41S MASTER</span>
               </div>
 
               <div class="absolute top-3 right-3 pointer-events-none bg-brand-gold text-brand-black px-2 py-0.5 rounded text-[9px] font-mono font-black">

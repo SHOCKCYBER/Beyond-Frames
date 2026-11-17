@@ -299,7 +299,7 @@ function initPortfolioMobileExpander() {
       if (toggleText) toggleText.textContent = 'Show Top Highlights';
       if (chevron) chevron.classList.add('rotate-180');
     } else {
-      if (toggleText) toggleText.textContent = 'Explore All 17 Cinema Frames (+11 More)';
+      if (toggleText) toggleText.textContent = 'Explore All 18 Cinema Frames (+12 More)';
       if (chevron) chevron.classList.remove('rotate-180');
 
       // Smooth scroll back to portfolio section header so user maintains orientation
@@ -534,6 +534,8 @@ function initShowreelModal() {
 function initCommercialVideoShowcase() {
   const video = document.getElementById('commercial-editing-video');
   const toggleBtn = document.getElementById('toggle-sound-btn');
+  const switchBtns = document.querySelectorAll('.reel-switch-btn');
+  const hudBadge = document.getElementById('commercial-hud-badge');
   if (!video) return;
 
   // Toggle play/pause on direct video click
@@ -543,6 +545,39 @@ function initCommercialVideoShowcase() {
     } else {
       video.pause();
     }
+  });
+
+  // Reel Switcher (Reel 01 / Reel 02)
+  switchBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      playShutterSound();
+
+      switchBtns.forEach(b => {
+        b.classList.remove('active', 'bg-brand-gold', 'text-brand-black');
+        b.classList.add('text-slate-400');
+        const icon = b.querySelector('i');
+        if (icon) icon.classList.remove('fill-current');
+      });
+
+      btn.classList.add('active', 'bg-brand-gold', 'text-brand-black');
+      btn.classList.remove('text-slate-400');
+      const activeIcon = btn.querySelector('i');
+      if (activeIcon) activeIcon.classList.add('fill-current');
+
+      const videoSrc = btn.getAttribute('data-video');
+      const badgeText = btn.getAttribute('data-badge');
+      if (videoSrc) {
+        const wasMuted = video.muted;
+        video.src = videoSrc;
+        video.muted = wasMuted;
+        video.load();
+        video.play().catch(() => {});
+      }
+      if (hudBadge && badgeText) {
+        hudBadge.textContent = badgeText;
+      }
+    });
   });
 
   if (toggleBtn) {
