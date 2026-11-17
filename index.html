@@ -1,0 +1,3062 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEYOND FRAMES | Photography, Videography, Cinematography & Post-Production</title>
+  <meta name="description" content="Official portfolio of Beyond Frames - Cinematic filmmaking, high-end photography, commercial video production, and color grading services.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo/beyond-frames-official-logo.jpg">
+  
+  <!-- Google Fonts: Editorial Serif + Techy Camera Monospace + Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#040406',
+              dark: '#08080c',
+              card: '#0d0d14',
+              gold: '#d4af37',
+              goldLight: '#f5cf70',
+              goldDark: '#a17f22',
+              silver: '#f1f5f9',
+              cyan: '#38bdf8',
+              amber: '#f59e0b',
+              crimson: '#ef4444',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-brand-black text-slate-100 font-body selection:bg-brand-gold selection:text-black">
+
+  <!-- Camera Shutter Flash Optical Pulse -->
+  <div id="camera-shutter-flash" class="camera-shutter-flash"></div>
+
+
+
+  <!-- Camera Monitor Scanline Sweep -->
+  <div class="camera-scanline"></div>
+
+  <!-- Cinematic Subtle Film Grain Texture -->
+  <div class="film-grain"></div>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header id="main-navbar" class="fixed top-0 left-0 w-full z-40 nav-glass">
+    <div class="w-full px-4 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Left Corner) -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="focus-bracket w-12 h-12 rounded-xl overflow-hidden border border-brand-gold/60 shadow-xl shadow-brand-gold/25 shrink-0 bg-black flex items-center justify-center p-0.5">
+          <img src="assets/logo/beyond-frames-official-logo.jpg" alt="Beyond Frames" class="brand-logo-img w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-base tracking-[0.22em] text-white group-hover:text-brand-gold transition-colors">
+            BEYOND <span class="text-brand-gold">FRAMES</span>
+          </span>
+          <span class="text-[7.5px] font-semibold tracking-[0.25em] text-slate-400 uppercase -mt-0.5">
+            Photography &bull; Videography &bull; Editing
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Center) -->
+      <nav class="hidden xl:flex items-center gap-5 text-xs font-medium tracking-wider uppercase text-slate-300">
+        <a href="#portfolio" class="hover:text-brand-gold transition-colors duration-200">Portfolio</a>
+        <a href="#commercial" class="hover:text-brand-gold transition-colors duration-200">Commercial</a>
+        <a href="#editing" class="hover:text-brand-gold transition-colors duration-200">Video Editing</a>
+        <a href="#services" class="hover:text-brand-gold transition-colors duration-200">Services</a>
+        <a href="#gear" class="hover:text-brand-gold transition-colors duration-200">Gear</a>
+        <a href="#spec-builder" class="text-brand-gold font-bold hover:text-brand-goldLight transition-colors duration-200 flex items-center gap-1">
+          <i data-lucide="sparkles" class="w-3 h-3"></i>
+          <span>Build Package</span>
+        </a>
+        <a href="#about" class="hover:text-brand-gold transition-colors duration-200">About</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors duration-200">Contact</a>
+      </nav>
+
+      <!-- Right Corner: Book Session & Mobile Toggle -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="#contact" class="px-5 sm:px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-lg shadow-brand-gold/25 flex items-center gap-2 hover:scale-105 active:scale-95">
+          <span>Book Session</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="xl:hidden text-slate-200 hover:text-brand-gold p-2 transition-colors" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-brand-dark/95 border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#portfolio" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">Portfolio</a>
+      <a href="#commercial" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">Commercial Showcase</a>
+      <a href="#editing" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">Commercial Video Editing</a>
+      <a href="#services" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">Services & Pricing</a>
+      <a href="#gear" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">Cinema Gear</a>
+      <a href="#spec-builder" class="block text-base font-medium text-brand-gold font-bold nav-link flex items-center gap-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>Build Production Package</span>
+      </a>
+      <a href="#about" class="block text-base font-medium text-slate-200 hover:text-brand-gold nav-link">About Studio</a>
+      <a href="#contact" class="block text-base font-medium text-brand-gold nav-link">Book Inquiries</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="#contact" class="w-full text-center text-xs font-bold uppercase tracking-wider py-3 rounded-full bg-brand-gold text-brand-black">
+          Book Session
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION (CAMERA VIEWFINDER & HUD INTERFACE)
+       ========================================================================= -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 sm:pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <!-- Camera Viewfinder HUD Elements -->
+    <div class="camera-hud-grid"></div>
+    <div class="hud-center-crosshair"></div>
+    <div class="anamorphic-flare"></div>
+    <div class="volumetric-light"></div>
+
+    <!-- Viewfinder Corner Telemetry (Like an ARRI / RED EVF Monitor) -->
+    <div class="absolute top-28 left-6 sm:left-10 font-mono text-[10px] text-brand-gold/60 tracking-widest hidden md:block select-none z-10">
+      <span>&#x250C; SENSOR: 35.9 &times; 24.0mm FULL-FRAME</span>
+    </div>
+    <div class="absolute top-28 right-6 sm:right-10 font-mono text-[10px] text-brand-gold/60 tracking-widest hidden md:block select-none z-10 text-right">
+      <span>ASPECT: 2.39:1 ANAMORPHIC &#x2510;</span>
+    </div>
+    <div class="absolute bottom-8 left-6 sm:left-10 font-mono text-[10px] text-brand-gold/60 tracking-widest hidden md:block select-none z-10">
+      <span>&#x2514; COLOR SPACE: S-LOG3 / ACEScc</span>
+    </div>
+    <div class="absolute bottom-8 right-6 sm:right-10 font-mono text-[10px] text-brand-gold/60 tracking-widest hidden md:block select-none z-10 text-right">
+      <span>SHUTTER: 180.0&deg; &bull; ISO 800 BASE &#x2518;</span>
+    </div>
+
+    <!-- Hero Background Visual (Cinematic High-Res Backdrop with Dark Vignette) -->
+    <div class="absolute inset-0 z-0">
+      <img src="assets/portfolio/golden-tide-avian-flight.jpg" 
+           alt="Cinematic production studio background by Director Abrar" 
+           class="w-full h-full object-cover opacity-20 filter brightness-70 scale-105 animate-pulse duration-[12000ms]">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/80 to-brand-black/90"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(4,4,6,0.92)_100%)]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto text-center space-y-7">
+      
+      <!-- Studio Emblem & Status Pill -->
+      <div class="flex flex-col items-center gap-4">
+        <!-- Sleek Brand Logo Box with Gold Focus Bracket -->
+        <div class="relative group">
+          <div class="focus-bracket w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-brand-gold/80 shadow-2xl shadow-brand-gold/25 transition-transform duration-500 group-hover:scale-105 bg-black p-1.5">
+            <img src="assets/logo/beyond-frames-official-logo.jpg" alt="Beyond Frames Official Logo" class="w-full h-full object-cover rounded-xl">
+          </div>
+          <div class="absolute -inset-1 rounded-2xl bg-brand-gold/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10"></div>
+        </div>
+
+        <!-- Studio Status Pill -->
+        <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-black/80 border border-brand-gold/40 backdrop-blur-md font-mono text-xs shadow-lg shadow-black/80">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-4"></span>
+          <span class="font-semibold tracking-[0.2em] uppercase text-slate-200">
+            Booking 2026 Productions &bull; Available All Over Maharashtra
+          </span>
+        </div>
+      </div>
+
+      <!-- Main Title (Cinematic Camera-Tech Viewfinder & Focus-Pull Animation) -->
+      <div class="hero-viewfinder-frame focus-pull-anim">
+        <!-- Viewfinder Corner Focus Brackets -->
+        <span class="vf-corner vf-tl"></span>
+        <span class="vf-corner vf-tr"></span>
+        <span class="vf-corner vf-bl"></span>
+        <span class="vf-corner vf-br"></span>
+        <span class="vf-axis-left"></span>
+        <span class="vf-axis-right"></span>
+
+        <!-- Top Camera Telemetry Indicator -->
+        <div class="flex items-center justify-center gap-2 mb-3 text-[10px] sm:text-xs font-mono uppercase tracking-[0.28em] text-brand-gold/90">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-ping"></span>
+          <span>[ OPTICAL FRAME // 2.39:1 CINEMATIC ]</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.05em] uppercase leading-tight sm:leading-tight text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.95)]">
+          WHERE VISION <br class="hidden sm:inline">
+          <span class="gold-shimmer-text">TRANSCENDS</span> THE LENS.
+        </h1>
+
+        <!-- Cine Focus Scan Laser Line & Camera Sensor Specs -->
+        <div class="cine-focus-line"></div>
+        <div class="flex items-center justify-center gap-3 sm:gap-6 mt-4 text-[9.5px] sm:text-xs font-mono tracking-widest text-slate-400 uppercase">
+          <span class="flex items-center gap-1.5 text-white/90 font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-red-500"></span> 24 FPS CINE</span>
+          <span class="text-brand-gold/60">•</span>
+          <span>ANAMORPHIC T1.5</span>
+          <span class="text-brand-gold/60">•</span>
+          <span>4K / 6K / 8K RAW</span>
+        </div>
+      </div>
+
+      <!-- Subtitle -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-300 font-light leading-relaxed">
+        <strong class="font-semibold text-white">Beyond Frames</strong> is an elite creative studio by <strong class="text-brand-gold font-medium">Director Abrar</strong>, crafting luxury 
+        <span class="text-brand-gold">cinematography</span>, <span class="text-brand-gold">high-impact photography</span>, 
+        and high-retention <span class="text-brand-gold">video editing & post-production</span> across Maharashtra.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2 font-mono">
+        <a href="#portfolio" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/25 flex items-center gap-3">
+          <span>Explore Works</span>
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+        <!-- Watch Commercial Edit Button -->
+        <a href="#editing" class="px-7 py-4 rounded-full text-xs font-semibold tracking-wider text-white bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-md transition-all duration-300 flex items-center gap-3 group">
+          <span class="w-7 h-7 rounded-full bg-brand-gold text-brand-black flex items-center justify-center pulse-gold">
+            <i data-lucide="play" class="w-3.5 h-3.5 fill-current ml-0.5"></i>
+          </span>
+          <span>Watch Commercial Edit</span>
+        </a>
+        <a href="#spec-builder" class="px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-gold/40 bg-brand-gold/10 hover:bg-brand-gold/20 text-brand-gold hover:text-white transition-all duration-300 flex items-center gap-2 shadow-lg shadow-brand-gold/15">
+          <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold"></i>
+          <span>Build Package</span>
+        </a>
+      </div>
+
+      <!-- Stats Bar with Camera Tech Badges -->
+      <div class="pt-14 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="font-serif text-3xl sm:text-4xl font-bold text-white">100<span class="text-brand-gold">+</span></div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-slate-400 mt-1 flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span>Projects Delivered</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="font-serif text-3xl sm:text-4xl font-bold text-white">4K / 6K / 8K</div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-slate-400 mt-1 flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span>Cinema Pipeline</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="font-serif text-3xl sm:text-4xl font-bold text-white">10-BIT 4:2:2</div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-slate-400 mt-1 flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span>All-Intra Codec</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="font-serif text-3xl sm:text-4xl font-bold text-white">8<span class="text-brand-gold">+</span> Yrs</div>
+          <div class="text-[11px] font-mono uppercase tracking-widest text-slate-400 mt-1 flex items-center justify-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+            <span>Industry Mastery</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       35MM CINEMA FILM STRIP REEL TAPE (CONTINUOUS TICKER)
+       ========================================================================= -->
+  <div class="filmstrip-container">
+    <div class="filmstrip-track">
+      <div class="film-cell">
+        <img src="assets/portfolio/golden-tide-avian-flight.jpg" alt="Golden Tide Motion" loading="lazy">
+        <span class="film-cell-tc">00:01:14:08</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/golden-desserts-storefront-facade.jpg" alt="Golden Desserts Commercial" loading="lazy">
+        <span class="film-cell-tc">00:02:05:14</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/wedding-couple-royal-portrait.jpg" alt="Royal Wedding Portrait" loading="lazy">
+        <span class="film-cell-tc">00:02:45:19</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/street-documentary-market-colors.jpg" alt="Bazaar Chronicles" loading="lazy">
+        <span class="film-cell-tc">00:03:12:02</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/belgian-waffle-confection-culinary.jpg" alt="Belgian Waffle Culinary" loading="lazy">
+        <span class="film-cell-tc">00:04:18:22</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/luxury-wedding-stage-decor.jpg" alt="Luxury Wedding Stage Decor" loading="lazy">
+        <span class="film-cell-tc">00:04:55:16</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/commercial-chandelier-ambient-interior.jpg" alt="Luminous Elegance Chandelier" loading="lazy">
+        <span class="film-cell-tc">00:05:32:09</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/poetic-cinema-lotus-bloom.jpg" alt="Lotus Bloom Poetics" loading="lazy">
+        <span class="film-cell-tc">00:06:08:21</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg" alt="Artisan Kulfi Confections" loading="lazy">
+        <span class="film-cell-tc">00:07:01:17</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/royal-banquet-grand-hall.jpg" alt="The Grand Ballroom Hall" loading="lazy">
+        <span class="film-cell-tc">00:07:33:04</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/ambient-light-feline-study.jpg" alt="Quiet Hours Feline Study" loading="lazy">
+        <span class="film-cell-tc">00:08:19:12</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/colonial-heritage-architecture-frame.jpg" alt="Imperial Stone Architecture" loading="lazy">
+        <span class="film-cell-tc">00:09:44:23</span>
+      </div>
+      <!-- Seamless loop duplicate -->
+      <div class="film-cell">
+        <img src="assets/portfolio/golden-tide-avian-flight.jpg" alt="Golden Tide Motion" loading="lazy">
+        <span class="film-cell-tc">00:01:14:08</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/golden-desserts-storefront-facade.jpg" alt="Golden Desserts Commercial" loading="lazy">
+        <span class="film-cell-tc">00:02:05:14</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/wedding-couple-royal-portrait.jpg" alt="Royal Wedding Portrait" loading="lazy">
+        <span class="film-cell-tc">00:02:45:19</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/street-documentary-market-colors.jpg" alt="Bazaar Chronicles" loading="lazy">
+        <span class="film-cell-tc">00:03:12:02</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/belgian-waffle-confection-culinary.jpg" alt="Belgian Waffle Culinary" loading="lazy">
+        <span class="film-cell-tc">00:04:18:22</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/luxury-wedding-stage-decor.jpg" alt="Luxury Wedding Stage Decor" loading="lazy">
+        <span class="film-cell-tc">00:04:55:16</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/commercial-chandelier-ambient-interior.jpg" alt="Luminous Elegance Chandelier" loading="lazy">
+        <span class="film-cell-tc">00:05:32:09</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/poetic-cinema-lotus-bloom.jpg" alt="Lotus Bloom Poetics" loading="lazy">
+        <span class="film-cell-tc">00:06:08:21</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg" alt="Artisan Kulfi Confections" loading="lazy">
+        <span class="film-cell-tc">00:07:01:17</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/royal-banquet-grand-hall.jpg" alt="The Grand Ballroom Hall" loading="lazy">
+        <span class="film-cell-tc">00:07:33:04</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/ambient-light-feline-study.jpg" alt="Quiet Hours Feline Study" loading="lazy">
+        <span class="film-cell-tc">00:08:19:12</span>
+      </div>
+      <div class="film-cell">
+        <img src="assets/portfolio/colonial-heritage-architecture-frame.jpg" alt="Imperial Stone Architecture" loading="lazy">
+        <span class="film-cell-tc">00:09:44:23</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       CORE DISCIPLINES / SERVICES BANNER
+       ========================================================================= -->
+  <section class="py-12 border-y border-white/10 bg-brand-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        
+        <div class="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-gold/30 transition-all">
+          <i data-lucide="camera" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+          <h3 class="font-display font-bold text-lg text-white">Photography</h3>
+          <p class="text-xs text-slate-400 mt-1">Portraits &bull; Editorial &bull; Fashion &bull; Commercial</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-gold/30 transition-all">
+          <i data-lucide="video" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+          <h3 class="font-display font-bold text-lg text-white">Cinematography</h3>
+          <p class="text-xs text-slate-400 mt-1">Brand Films &bull; Music Videos &bull; Commercials</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-gold/30 transition-all">
+          <i data-lucide="clapperboard" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+          <h3 class="font-display font-bold text-lg text-white">Video Production</h3>
+          <p class="text-xs text-slate-400 mt-1">Creative Direction &bull; Lighting &bull; Audio</p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-brand-gold/30 transition-all">
+          <i data-lucide="scissors" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+          <h3 class="font-display font-bold text-lg text-white">Video Editing</h3>
+          <p class="text-xs text-slate-400 mt-1">Narrative Pacing &bull; Sound Design &bull; Social Cuts</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       PORTFOLIO GALLERY (FILTERABLE + INTERACTIVE LIGHTBOX)
+       ========================================================================= -->
+  <section id="portfolio" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold mb-2">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Curated Gallery</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+          FEATURED <span class="gold-gradient-text">PORTFOLIO</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+          Click any frame to view camera specs, lens configurations, and high-resolution cinema stills.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button class="filter-btn active px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="all">
+          <span>All</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">17</span>
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="cinematography">
+          <span>Cinematography</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">5</span>
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="photography">
+          <span>Photography</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">6</span>
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="commercial">
+          <span>Commercial</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">5</span>
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all flex items-center gap-2" data-filter="editing">
+          <span>Video Editing</span>
+          <span class="badge-count px-1.5 py-0.5 rounded-full text-[10px] bg-black/30">2</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         THE DIRECTOR'S CONTROL DECK (LIVE ASPECT RATIO & FILM STOCK SWITCHER)
+         ========================================================================= -->
+    <div class="director-console mb-10 p-4 sm:p-5 rounded-2xl flex flex-col xl:flex-row items-center justify-between gap-4">
+      
+      <!-- Left: Console Status & Label -->
+      <div class="flex items-center gap-3.5">
+        <div class="w-10 h-10 rounded-xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold shrink-0">
+          <i data-lucide="sliders" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <div class="text-[10px] font-mono uppercase tracking-[0.2em] text-brand-gold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="font-bold">DIRECTOR'S CONTROL DECK // SENSOR MODULATOR</span>
+          </div>
+          <div class="text-xs text-slate-300 font-medium mt-0.5">Live-switch cinema aspect ratios, 35mm film stocks, and optical grain</div>
+        </div>
+      </div>
+
+      <!-- Right: Control Dials & Toggles -->
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        
+        <!-- Live Aspect Ratio Switcher -->
+        <div class="flex items-center gap-1 bg-black/80 p-1 rounded-xl border border-white/10 font-mono text-[10px]">
+          <span class="text-slate-500 px-2 uppercase text-[9px] font-bold">ASPECT:</span>
+          <button class="aspect-mode-btn active" data-aspect="default" title="Native Frame Proportions">ORIGINAL</button>
+          <button class="aspect-mode-btn" data-aspect="cine-widescreen" title="2.39:1 Anamorphic Cinema Scope">2.39:1 CINE</button>
+          <button class="aspect-mode-btn" data-aspect="cine-standard" title="16:9 DCI Ultra HD Standard">16:9 DCI</button>
+          <button class="aspect-mode-btn" data-aspect="cine-vertical" title="9:16 Social Reel / Vertical Viewfinder">9:16 REEL</button>
+        </div>
+
+        <!-- Film Stock Emulation -->
+        <div class="flex items-center gap-1 bg-black/80 p-1 rounded-xl border border-white/10 font-mono text-[10px]">
+          <span class="text-slate-500 px-2 uppercase text-[9px] font-bold">STOCK:</span>
+          <button class="film-stock-btn active" data-stock="raw" title="Crisp Digital 8K Sensor RAW">8K RAW</button>
+          <button class="film-stock-btn" data-stock="kodak" title="Authentic 35mm Kodak Film Grain & Halation">🎞️ KODAK 35MM</button>
+          <button class="film-stock-btn" data-stock="noir" title="High-Contrast Silver Halide Monochrome">🌑 NOIR B&W</button>
+        </div>
+
+        <!-- 2.5x Director's Optical Loupe Tool -->
+        <button id="toggle-loupe-tool" class="px-3.5 py-2 rounded-xl bg-brand-gold/15 hover:bg-brand-gold text-brand-gold hover:text-brand-black border border-brand-gold/40 text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md active:scale-95" title="Inspect optical film grain with 2.5x magnifier">
+          <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+          <span>2.5X LOUPE</span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ITEM 1: Cinematography (The Golden Wake - Widescreen Feature) -->
+      <div class="portfolio-card aspect-[16/10] sm:col-span-2 lg:col-span-2" 
+           data-category="cinematography"
+           data-title="The Golden Wake | Cinematic Maritime Motion"
+           data-category-label="Cinematography &bull; 60fps Motion Study"
+           data-gear="Sony A7 IV &bull; 70-200mm f/2.8 GM &bull; S-Cinetone 4K 60P"
+           data-client="Coastal Motion Showcase">
+        <img src="assets/portfolio/golden-tide-avian-flight.jpg" 
+             data-highres="assets/portfolio/golden-tide-avian-flight.jpg"
+             alt="Cinematic maritime motion by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> RAW 4K</span>
+          <span class="text-white/60">4K 60FPS</span>
+          <span class="text-emerald-400">SHUTTER 180&deg;</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">CINEMATOGRAPHY</span>
+            <span class="text-xs text-slate-300">60fps Dynamic Motion</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold font-display text-white">The Golden Wake</h3>
+          <p class="text-xs text-slate-300 mt-1">Maritime High-Speed Motion &bull; Natural Specular Wave Reflections</p>
+        </div>
+      </div>
+
+      <!-- ITEM 2: Photography (Royal Wedding Couple Portrait) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="photography"
+           data-title="Royal Heritage | Grand Wedding Couple Portrait"
+           data-category-label="Photography &bull; Royal Wedding"
+           data-gear="Canon EOS R &bull; 85mm f/1.4 &bull; Porta Light + Godox LC500"
+           data-client="Royal Wedding Collection">
+        <img src="assets/portfolio/wedding-couple-royal-portrait.jpg" 
+             data-highres="assets/portfolio/wedding-couple-royal-portrait.jpg"
+             alt="Royal wedding couple portrait by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">85MM f/1.4</span>
+          <span class="text-brand-gold">PORTA + LC500</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">Royal Heritage</h3>
+          <p class="text-xs text-slate-300 mt-1">85mm Portrait Prime &bull; High-CRI Studio Lighting &bull; Master Retouched</p>
+        </div>
+      </div>
+
+      <!-- ITEM 3: Cinematography (Bazaar Chronicles - Street Documentary) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="cinematography"
+           data-title="Bazaar Chronicles | Street Cinema Realism"
+           data-category-label="Cinematography &bull; Documentary Feature"
+           data-gear="Canon EOS R &bull; 50mm f/1.4 &bull; Natural Ambient Light"
+           data-client="Documentary Film Series">
+        <img src="assets/portfolio/street-documentary-market-colors.jpg" 
+             data-highres="assets/portfolio/street-documentary-market-colors.jpg"
+             alt="Street documentary bazaar cinematography by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">50MM f/1.4</span>
+          <span class="text-sky-400">NATURAL LIGHT</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">CINEMATOGRAPHY</span>
+            <span class="text-xs text-slate-300">Documentary Cinema</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Bazaar Chronicles</h3>
+          <p class="text-xs text-slate-300 mt-1">Vibrant Market Color Separation &bull; Shallow Depth &bull; Raw Street Realism</p>
+        </div>
+      </div>
+
+      <!-- ITEM 4: Commercial (Golden Desserts Storefront & Brand Identity) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="commercial"
+           data-title="Golden Desserts & More | Commercial Storefront & Brand Identity"
+           data-category-label="Commercial &bull; Brand Identity & Architecture"
+           data-gear="Sony A7 IV &bull; 24-70mm f/2.8 GM &bull; HDR Night Architecture"
+           data-client="Golden Desserts & More">
+        <img src="assets/portfolio/golden-desserts-storefront-facade.jpg" 
+             data-highres="assets/portfolio/golden-desserts-storefront-facade.jpg"
+             alt="Golden Desserts commercial storefront brand photography by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">24-70MM f/2.8</span>
+          <span class="text-amber-400">NIGHT ARCHITECTURE</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">COMMERCIAL</span>
+          <h3 class="text-lg font-bold font-display text-white">Golden Desserts & More</h3>
+          <p class="text-xs text-slate-300 mt-1">Illuminated Retail Storefront &bull; Architectural Brand Identity</p>
+        </div>
+      </div>
+
+      <!-- ITEM 5: Photography (Wildlife Macro Chameleon Study) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="photography"
+           data-title="The Camouflage Sentinel | Wildlife Macro Study"
+           data-category-label="Photography &bull; Wildlife Macro"
+           data-gear="Canon EOS R &bull; 100mm Macro f/2.8 &bull; Natural Light"
+           data-client="Wild India Natural Series">
+        <img src="assets/portfolio/wildlife-macro-chameleon.jpg" 
+             data-highres="assets/portfolio/wildlife-macro-chameleon.jpg"
+             alt="Macro wildlife chameleon climbing tree by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">100MM MACRO f/2.8</span>
+          <span class="text-brand-gold">NATURAL BOKEH</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">The Camouflage Sentinel</h3>
+          <p class="text-xs text-slate-300 mt-1">100mm Macro Optics &bull; Organic Texture & Delicate Focus</p>
+        </div>
+      </div>
+
+      <!-- ITEM 6: Cinematography (Serenity in Bloom - Lotus Visual Poetics) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="cinematography"
+           data-title="Serenity in Bloom | Visual Poetry Macro"
+           data-category-label="Cinematography &bull; Visual Poetry & Macro"
+           data-gear="Sony A7 IV &bull; 90mm Macro f/2.8 &bull; Cine Flare Filter"
+           data-client="Atmospheric Visual Lab">
+        <img src="assets/portfolio/poetic-cinema-lotus-bloom.jpg" 
+             data-highres="assets/portfolio/poetic-cinema-lotus-bloom.jpg"
+             alt="Poetic lotus flower cinema still by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">90MM MACRO</span>
+          <span class="text-emerald-400">S-LOG3 GRADE</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">CINEMATOGRAPHY</span>
+            <span class="text-xs text-slate-300">Poetic Visual Art</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Serenity in Bloom</h3>
+          <p class="text-xs text-slate-300 mt-1">Atmospheric Dark Water Contrast &bull; Organic Petal Illumination</p>
+        </div>
+      </div>
+
+      <!-- ITEM 7: Commercial (Artisan Gourmet Kulfi / Popsicle Confections) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="commercial"
+           data-title="Artisan Confections | Gourmet Popsicle & Kulfi Showcase"
+           data-category-label="Commercial &bull; Culinary & Food Styling"
+           data-gear="Canon EOS R &bull; 50mm f/1.4 &bull; Godox LC500 Diffused Key"
+           data-client="Golden Desserts & More">
+        <img src="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg" 
+             data-highres="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg"
+             alt="Artisan dessert kulfi popsicles commercial food photography by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">50MM f/1.4</span>
+          <span class="text-brand-gold">CULINARY STYLING</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">COMMERCIAL</span>
+          <h3 class="text-lg font-bold font-display text-white">Artisan Confections</h3>
+          <p class="text-xs text-slate-300 mt-1">Vibrant Flavor Spectrum &bull; High-CRI Food Styling & Texture</p>
+        </div>
+      </div>
+
+      <!-- ITEM 8: Commercial Video Editing (Master Cut & Sound Design) -->
+      <div class="portfolio-card aspect-[4/5] relative group" 
+           data-category="commercial editing"
+           data-title="Commercial Video Edit | High-Retention Master Reel"
+           data-category-label="Commercial &bull; Video Editing"
+           data-gear="Premiere Pro &bull; DaVinci Resolve &bull; Sound Design Suite"
+           data-client="Commercial Brand Showcase"
+           data-video-src="assets/videos/commercial-video-editing-showcase.mp4">
+        <img src="assets/portfolio/commercial-video-editing-poster.jpg" 
+             data-highres="assets/portfolio/commercial-video-editing-poster.jpg" 
+             alt="Commercial video editing master cut by Director Abrar" loading="lazy">
+        
+        <!-- Interactive Hover Preview Video -->
+        <video class="hover-preview-video absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" muted loop playsinline preload="none">
+          <source src="assets/videos/commercial-video-editing-showcase.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Video Play Icon Overlay -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <div class="w-16 h-16 rounded-full bg-brand-gold text-brand-black flex items-center justify-center pulse-gold shadow-2xl transition-transform duration-300 group-hover:scale-110">
+            <i data-lucide="play" class="w-7 h-7 fill-current ml-0.5"></i>
+          </div>
+        </div>
+
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> 41s MASTER</span>
+          <span class="text-white/60">9:16 CINE REEL</span>
+          <span class="text-emerald-400">SOUND DESIGN</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">COMMERCIAL EDIT</span>
+            <span class="text-[10px] font-mono text-brand-gold">▶ CLICK TO PLAY</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Commercial Video Edit</h3>
+          <p class="text-xs text-slate-300 mt-1">High-Retention Cut &bull; Sound Design &bull; Dynamic Motion</p>
+        </div>
+      </div>
+
+      <!-- ITEM 9: Photography (Luxury Wedding Stage Architecture) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="photography"
+           data-title="Golden Splendor | Luxury Stage Architecture"
+           data-category-label="Photography &bull; Stage & Ambience"
+           data-gear="Sony A7 IV &bull; 24-70mm f/2.8 GM &bull; Ambient Stage Array"
+           data-client="Grand Gala Stage Decor">
+        <img src="assets/portfolio/luxury-wedding-stage-decor.jpg" 
+             data-highres="assets/portfolio/luxury-wedding-stage-decor.jpg"
+             alt="Luxury wedding stage floral decor by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">24-70MM f/2.8 GM</span>
+          <span class="text-sky-400">STAGE LIGHTING</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">Golden Splendor</h3>
+          <p class="text-xs text-slate-300 mt-1">Floral Arch Symmetry &bull; Royal Gold Thrones & Ambience</p>
+        </div>
+      </div>
+
+      <!-- ITEM 9: Cinematography (Quiet Hours - Feline Ambient Study) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="cinematography"
+           data-title="Quiet Hours | Ambient Narrative Frame"
+           data-category-label="Cinematography &bull; Narrative Mood"
+           data-gear="Canon EOS R &bull; 85mm f/1.4 &bull; Golden Hour Backlight"
+           data-client="Indie Short Film Archive">
+        <img src="assets/portfolio/ambient-light-feline-study.jpg" 
+             data-highres="assets/portfolio/ambient-light-feline-study.jpg"
+             alt="Atmospheric feline narrative frame by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">85MM f/1.4</span>
+          <span class="text-brand-gold">RIM LIGHT FLARE</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">CINEMATOGRAPHY</span>
+            <span class="text-xs text-slate-300">Narrative Mood</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Quiet Hours</h3>
+          <p class="text-xs text-slate-300 mt-1">Natural Ambient Backlight &bull; Golden Rim Texture & Mood</p>
+        </div>
+      </div>
+
+      <!-- ITEM 10: Photography (Urban Wildlife Raptor Study) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="photography"
+           data-title="Sovereign Gaze | Urban Raptor Study"
+           data-category-label="Photography &bull; Wildlife & Urban Mood"
+           data-gear="Sony A7 IV &bull; 70-200mm f/2.8 GM &bull; Desaturated Noir Grade"
+           data-client="Metropolitan Avian Chronicle">
+        <img src="assets/portfolio/urban-wildlife-eagle-portrait.jpg" 
+             data-highres="assets/portfolio/urban-wildlife-eagle-portrait.jpg"
+             alt="Urban raptor falcon portrait by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">70-200MM f/2.8</span>
+          <span class="text-brand-gold">1/1600s TELE</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">Sovereign Gaze</h3>
+          <p class="text-xs text-slate-300 mt-1">70-200mm Telephoto &bull; Desaturated Architectural Contrast</p>
+        </div>
+      </div>
+
+      <!-- ITEM 12: Commercial (Belgian Gold Waffles Macro Product Ad) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="commercial"
+           data-title="Belgian Gold Waffles | Gourmet Pastry & Macro Product Ad"
+           data-category-label="Commercial &bull; Macro Food & Product"
+           data-gear="Sony A7 IV &bull; 90mm Macro f/2.8 &bull; Porta Light Accent"
+           data-client="Golden Desserts & More">
+        <img src="assets/portfolio/belgian-waffle-confection-culinary.jpg" 
+             data-highres="assets/portfolio/belgian-waffle-confection-culinary.jpg"
+             alt="Belgian waffle gourmet dessert macro food photography by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">90MM MACRO f/2.8</span>
+          <span class="text-sky-400">STUDIO LIGHTING</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">COMMERCIAL</span>
+          <h3 class="text-lg font-bold font-display text-white">Belgian Gold Waffles</h3>
+          <p class="text-xs text-slate-300 mt-1">Pistachio & Cream Glaze &bull; Macro Culinary Texture & Mood</p>
+        </div>
+      </div>
+
+      <!-- ITEM 13: Cinematography (Imperial Stone - Colonial Heritage Architecture) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="cinematography"
+           data-title="Imperial Stone | Heritage Cinema Frame"
+           data-category-label="Cinematography &bull; Period & Architectural Film"
+           data-gear="Sony A7 IV &bull; 24-70mm f/2.8 GM &bull; Architectural Perspective Rig"
+           data-client="Heritage Docuseries">
+        <img src="assets/portfolio/colonial-heritage-architecture-frame.jpg" 
+             data-highres="assets/portfolio/colonial-heritage-architecture-frame.jpg"
+             alt="Colonial Victorian heritage architecture cinema still by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">24-70MM f/2.8</span>
+          <span class="text-emerald-400">ARCHITECTURAL RIG</span>
+        </div>
+        <div class="portfolio-overlay">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold">CINEMATOGRAPHY</span>
+            <span class="text-xs text-slate-300">Period Cinema</span>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white">Imperial Stone</h3>
+          <p class="text-xs text-slate-300 mt-1">Victorian Colonial Masonry &bull; Wide Dynamic Range Architectural Rig</p>
+        </div>
+      </div>
+
+      <!-- ITEM 14: Commercial (Luminous Elegance - Chandelier & Ambient Interior) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="commercial"
+           data-title="Luminous Elegance | Architectural Interior & Lighting Design"
+           data-category-label="Commercial &bull; Hospitality & Interior"
+           data-gear="Canon EOS R &bull; 35mm f/1.4 &bull; Ambient Glow Exposure Bracket"
+           data-client="Luxury Hospitality Showcase">
+        <img src="assets/portfolio/commercial-chandelier-ambient-interior.jpg" 
+             data-highres="assets/portfolio/commercial-chandelier-ambient-interior.jpg"
+             alt="Chandelier architectural lighting commercial photography by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">35MM f/1.4</span>
+          <span class="text-amber-400">AMBIENT HDR</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">COMMERCIAL</span>
+          <h3 class="text-lg font-bold font-display text-white">Luminous Elegance</h3>
+          <p class="text-xs text-slate-300 mt-1">Handcrafted Crystal Orbs &bull; Warm Interior Illumination</p>
+        </div>
+      </div>
+
+      <!-- ITEM 15: Photography (Royal Banquet Grand Hall) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="photography"
+           data-title="The Grand Ballroom | Architectural Interior"
+           data-category-label="Photography &bull; Interior & Architecture"
+           data-gear="Sony A7 IV &bull; 16-35mm f/2.8 GM &bull; Architectural Bracket"
+           data-client="Imperial Grand Banquet">
+        <img src="assets/portfolio/royal-banquet-grand-hall.jpg" 
+             data-highres="assets/portfolio/royal-banquet-grand-hall.jpg"
+             alt="Grand banquet reception hall by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> SONY A7 IV</span>
+          <span class="text-white/60">16-35MM f/2.8</span>
+          <span class="text-brand-gold">HDR BRACKET</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">The Grand Ballroom</h3>
+          <p class="text-xs text-slate-300 mt-1">Chandelier Symmetrical Perspective &bull; Architectural HDR</p>
+        </div>
+      </div>
+
+      <!-- ITEM 16: Photography (Amber Sentinel - Golden Hour Eagle Study) -->
+      <div class="portfolio-card aspect-[4/5]" 
+           data-category="photography"
+           data-title="Amber Sentinel | Golden Hour Avian Study"
+           data-category-label="Photography &bull; Golden Hour Wildlife"
+           data-gear="Canon EOS R &bull; 70-200mm f/2.8 &bull; Natural Sunset Flare"
+           data-client="Golden Hour Wild Series">
+        <img src="assets/portfolio/golden-hour-eagle-study.jpg" 
+             data-highres="assets/portfolio/golden-hour-eagle-study.jpg"
+             alt="Golden hour raptor portrait by Director Abrar" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> CANON R</span>
+          <span class="text-white/60">200MM f/2.8</span>
+          <span class="text-brand-gold">GOLDEN HOUR</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">PHOTOGRAPHY</span>
+          <h3 class="text-lg font-bold font-display text-white">Amber Sentinel</h3>
+          <p class="text-xs text-slate-300 mt-1">Warm Evening Flare &bull; Feather Detail &bull; Kinetic Perch</p>
+        </div>
+      </div>
+
+      <!-- ITEM 17: Editing (Color Grading Suite) -->
+      <div class="portfolio-card aspect-[16/10]" 
+           data-category="editing"
+           data-title="The Color Suite | DaVinci Grading Workflow"
+           data-category-label="Editing &bull; Post-Production"
+           data-gear="Color Calibrated DeckLink 4K &bull; Tangent Element Panels"
+           data-client="Beyond Frames Studio Lab">
+        <img src="assets/portfolio/commercial-video-editing-poster.jpg" 
+             data-highres="assets/portfolio/commercial-video-editing-poster.jpg"
+             alt="Color grading console studio" loading="lazy">
+        <div class="card-hud-telemetry">
+          <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span> DAVINCI STUDIO</span>
+          <span class="text-white/60">DECKLINK 4K</span>
+          <span class="text-emerald-400">CALIBRATED REC.709</span>
+        </div>
+        <div class="portfolio-overlay">
+          <span class="px-2.5 py-1 rounded text-[10px] font-bold tracking-widest uppercase badge-gold w-fit mb-2">POST & COLOR</span>
+          <h3 class="text-lg font-bold font-display text-white">The Color Suite</h3>
+          <p class="text-xs text-slate-300 mt-1">Precision Grading &bull; Film Grain &bull; Finishing</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       COMMERCIAL BRAND PRODUCTIONS & DAVINCI COLOR SUITE
+       ========================================================================= -->
+  <section id="commercial" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10 relative">
+    
+    <!-- Ambient Gold Glow Backdrops -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 relative z-10">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        <span>Commercial & Brand Productions</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+        FLAGSHIP CAMPAIGN: <span class="gold-gradient-text">GOLDEN DESSERTS & MORE</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        High-impact culinary macro optics, illuminated retail architecture, and warm hospitality lighting engineered by Director Abrar to drive client engagement and elevate brand prestige across Maharashtra.
+      </p>
+    </div>
+
+    <!-- =======================================================================
+         INTERACTIVE DAVINCI COLOR SUITE: BEFORE & AFTER RAW SLIDER
+         ======================================================================= -->
+    <div class="mb-20 max-w-5xl mx-auto p-6 sm:p-10 rounded-3xl bg-brand-card/90 border border-brand-gold/30 shadow-2xl relative">
+      
+      <!-- Studio Header Controls -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-gold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>DaVinci Resolve ACES Color Pipeline &bull; Live Sensor Ingest</span>
+          </div>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mt-1">
+            Flat Sensor RAW vs. Master Commercial Color Grade
+          </h3>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-mono text-slate-300 bg-black/60 px-3.5 py-1.5 rounded-full border border-white/10">
+          <i data-lucide="sliders" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>Drag Golden Divider To Compare</span>
+        </div>
+      </div>
+
+      <!-- Shot Switcher Tabs (Select between the 4 authentic commercial assets) -->
+      <div class="py-6 flex flex-wrap items-center justify-center gap-2.5">
+        <button class="commercial-shot-tab active" data-shot="waffle" data-img="assets/portfolio/belgian-waffle-confection-culinary.jpg" data-title="Belgian Waffle Confections" data-spec="Sony A7 IV &bull; 90mm Macro f/2.8 &bull; Rim Light" data-lens="90mm f/2.8 Macro" data-iso="ISO 200" data-shutter="1/160s">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Belgian Waffles (Macro Food)</span>
+        </button>
+        <button class="commercial-shot-tab" data-shot="kulfi" data-img="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg" data-title="Artisan Kulfi & Gourmet Popsicles" data-spec="Sony A7 IV &bull; 90mm Macro f/2.8 &bull; Softbox" data-lens="90mm f/2.8 Macro" data-iso="ISO 160" data-shutter="1/200s">
+          <i data-lucide="palette" class="w-3.5 h-3.5"></i>
+          <span>Artisan Popsicles (5 Flavors)</span>
+        </button>
+        <button class="commercial-shot-tab" data-shot="storefront" data-img="assets/portfolio/golden-desserts-storefront-facade.jpg" data-title="Golden Desserts Storefront Facade" data-spec="Sony A7 IV &bull; 24-70mm f/2.8 GM &bull; HDR Architecture" data-lens="24-70mm GM @ 35mm" data-iso="ISO 400" data-shutter="1/125s">
+          <i data-lucide="store" class="w-3.5 h-3.5"></i>
+          <span>Retail Storefront (Architecture)</span>
+        </button>
+        <button class="commercial-shot-tab" data-shot="chandelier" data-img="assets/portfolio/commercial-chandelier-ambient-interior.jpg" data-title="Luminous Elegance Chandelier" data-spec="Canon EOS R &bull; 35mm f/1.4 L &bull; Ambient Exposure" data-lens="35mm f/1.4 L" data-iso="ISO 800" data-shutter="1/100s">
+          <i data-lucide="lamp" class="w-3.5 h-3.5"></i>
+          <span>Luminous Chandelier (Interior)</span>
+        </button>
+      </div>
+
+      <!-- The Interactive Split-Screen Stage -->
+      <div id="color-grade-stage" class="color-grade-stage relative cursor-ew-resize" style="--grade-pos: 50%;">
+        
+        <!-- After Layer (Right/Bottom) -> Master Commercial Grade -->
+        <div class="color-grade-layer color-grade-after">
+          <img id="grade-img-after" src="assets/portfolio/belgian-waffle-confection-culinary.jpg" alt="Master Commercial Color Grade by Director Abrar">
+        </div>
+
+        <!-- Before Layer (Left/Top) -> Flat Log / RAW Sensor Ingest -->
+        <div class="color-grade-layer color-grade-before">
+          <img id="grade-img-before" src="assets/portfolio/belgian-waffle-confection-culinary.jpg" alt="Flat S-Log3 RAW Sensor Ingest">
+        </div>
+
+        <!-- Gold Divider Line -->
+        <div class="color-grade-line">
+          <div class="color-grade-handle">
+            <span class="flex items-center gap-1 font-mono font-bold text-[10px]">
+              &lang; &bull; &rang;
+            </span>
+          </div>
+        </div>
+
+        <!-- Telemetry Badges -->
+        <div class="color-grade-badge before-badge flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+          <span>RAW S-LOG3 / FLAT SENSOR</span>
+        </div>
+        <div class="color-grade-badge after-badge flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse"></span>
+          <span>MASTER COMMERCIAL GRADE</span>
+        </div>
+
+      </div>
+
+      <!-- Telemetry Status Bar Under Stage -->
+      <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between text-xs font-mono text-slate-400 gap-4">
+        <div class="flex items-center gap-3">
+          <span class="text-white font-bold" id="grade-shot-title">Belgian Waffle Confections</span>
+          <span class="text-white/20">&bull;</span>
+          <span class="text-brand-gold" id="grade-shot-spec">Sony A7 IV &bull; 90mm Macro f/2.8</span>
+        </div>
+        <div class="flex items-center gap-3 text-[11px]">
+          <span class="bg-black/60 px-2.5 py-1 rounded border border-white/10 text-slate-300" id="grade-shot-lens">90mm f/2.8 Macro</span>
+          <span class="bg-black/60 px-2.5 py-1 rounded border border-white/10 text-emerald-400" id="grade-shot-iso">ISO 200</span>
+          <span class="bg-black/60 px-2.5 py-1 rounded border border-white/10 text-sky-400" id="grade-shot-shutter">1/160s</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =======================================================================
+         THE 4-PIECE COMMERCIAL CAMPAIGN LOOKBOOK
+         ======================================================================= -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      
+      <!-- Card 1: Golden Desserts Storefront -->
+      <div class="commercial-lookbook-card group">
+        <div class="relative aspect-[16/10] overflow-hidden bg-black">
+          <img src="assets/portfolio/golden-desserts-storefront-facade.jpg" 
+               alt="Golden Desserts & More retail storefront architecture" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase bg-brand-gold text-brand-black shadow-lg">
+              STOREFRONT & ARCHITECTURE
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+            <span class="text-brand-gold font-bold">SONY A7 IV &bull; 24-70MM GM</span>
+            <span class="text-slate-300 bg-black/70 px-2.5 py-0.5 rounded border border-white/10">NIGHT ARCHITECTURE</span>
+          </div>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+            Golden Desserts & More &bull; Retail Exterior Identity
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            High dynamic range exterior night capture balancing vibrant neon signage, interior illuminated display counters, and deep cyan facade tones to invite passing foot traffic.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-white/10">
+            <span class="text-[11px] font-mono text-slate-400 uppercase">Campaign Palette:</span>
+            <div class="flex items-center gap-1.5">
+              <span class="palette-chip" style="background-color: #0A4247;" title="Peacock Teal #0A4247"></span>
+              <span class="palette-chip" style="background-color: #D4AF37;" title="Imperial Gold #D4AF37"></span>
+              <span class="palette-chip" style="background-color: #F5CF70;" title="Amber Glow #F5CF70"></span>
+              <span class="palette-chip" style="background-color: #111827;" title="Deep Obsidian #111827"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Artisan Kulfi Popsicles -->
+      <div class="commercial-lookbook-card group">
+        <div class="relative aspect-[16/10] overflow-hidden bg-black">
+          <img src="assets/portfolio/artisan-kulfi-gourmet-popsicles.jpg" 
+               alt="Artisan gourmet kulfi fruit popsicles commercial food styling" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase bg-brand-gold text-brand-black shadow-lg">
+              CULINARY FOOD STYLING
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+            <span class="text-brand-gold font-bold">SONY A7 IV &bull; 90MM MACRO</span>
+            <span class="text-emerald-400 bg-black/70 px-2.5 py-0.5 rounded border border-white/10">5-FLAVOR PALETTE</span>
+          </div>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+            Artisan Confections &bull; Gourmet Kulfi & Popsicle Array
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Meticulously staged dessert lineup displaying Malai Cream, Jamun Berry, Kiwi with natural seeds, Strawberry Rose, and Alphonso Mango on cold stoneware.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-white/10">
+            <span class="text-[11px] font-mono text-slate-400 uppercase">Campaign Palette:</span>
+            <div class="flex items-center gap-1.5">
+              <span class="palette-chip" style="background-color: #FAF0E6;" title="Malai Cream #FAF0E6"></span>
+              <span class="palette-chip" style="background-color: #5C1D38;" title="Jamun Berry #5C1D38"></span>
+              <span class="palette-chip" style="background-color: #7A9A32;" title="Kiwi Green #7A9A32"></span>
+              <span class="palette-chip" style="background-color: #EB8294;" title="Strawberry Rose #EB8294"></span>
+              <span class="palette-chip" style="background-color: #EE9322;" title="Alphonso Mango #EE9322"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Belgian Gold Waffles -->
+      <div class="commercial-lookbook-card group">
+        <div class="relative aspect-[16/10] overflow-hidden bg-black">
+          <img src="assets/portfolio/belgian-waffle-confection-culinary.jpg" 
+               alt="Belgian waffle confection commercial food photography" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase bg-brand-gold text-brand-black shadow-lg">
+              MACRO PRODUCT AD
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+            <span class="text-brand-gold font-bold">SONY A7 IV &bull; 90MM MACRO</span>
+            <span class="text-amber-400 bg-black/70 px-2.5 py-0.5 rounded border border-white/10">GLAZE DYNAMICS</span>
+          </div>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+            Belgian Gold Waffles &bull; Dual-Glazed Dessert Confection
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Directional rim lighting capturing the contrast between decadent pistachio green glaze and silky cream coating over fresh-baked chocolate waffle grids.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-white/10">
+            <span class="text-[11px] font-mono text-slate-400 uppercase">Campaign Palette:</span>
+            <div class="flex items-center gap-1.5">
+              <span class="palette-chip" style="background-color: #899E41;" title="Pistachio #899E41"></span>
+              <span class="palette-chip" style="background-color: #FFF3D4;" title="Vanilla Cream #FFF3D4"></span>
+              <span class="palette-chip" style="background-color: #4A2B11;" title="Dark Cocoa #4A2B11"></span>
+              <span class="palette-chip" style="background-color: #D4AF37;" title="Golden Waffle #D4AF37"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Luminous Elegance Chandelier -->
+      <div class="commercial-lookbook-card group">
+        <div class="relative aspect-[16/10] overflow-hidden bg-black">
+          <img src="assets/portfolio/commercial-chandelier-ambient-interior.jpg" 
+               alt="Luxury chandelier hospitality ambient lighting" 
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-transparent opacity-80"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 rounded-full text-[10px] font-mono font-bold tracking-widest uppercase bg-brand-gold text-brand-black shadow-lg">
+              HOSPITALITY & INTERIORS
+            </span>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+            <span class="text-brand-gold font-bold">CANON EOS R &bull; 35MM LENS</span>
+            <span class="text-sky-400 bg-black/70 px-2.5 py-0.5 rounded border border-white/10">AMBIENT GLOW</span>
+          </div>
+        </div>
+        <div class="p-6 space-y-3">
+          <h4 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+            Luminous Elegance &bull; Crystal Pendant & Spatial Lighting
+          </h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ambient low-light exposure capturing warm incandescent crystal spheres cascading before intricate gold calligraphy panels, creating an atmosphere of regal warmth.
+          </p>
+          <div class="pt-2 flex items-center justify-between border-t border-white/10">
+            <span class="text-[11px] font-mono text-slate-400 uppercase">Campaign Palette:</span>
+            <div class="flex items-center gap-1.5">
+              <span class="palette-chip" style="background-color: #FFB800;" title="Warm Filament #FFB800"></span>
+              <span class="palette-chip" style="background-color: #0D3B43;" title="Teal Atmosphere #0D3B43"></span>
+              <span class="palette-chip" style="background-color: #C5A059;" title="Gilded Gold #C5A059"></span>
+              <span class="palette-chip" style="background-color: #03080A;" title="Midnight Deep #03080A"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Commercial Campaign Booking Banner -->
+    <div class="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-brand-gold/15 via-black/80 to-brand-gold/15 border border-brand-gold/40 text-center space-y-4">
+      <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-gold">
+        <i data-lucide="check-circle" class="w-4 h-4"></i>
+        <span>Commercial Production &bull; Director Abrar</span>
+      </div>
+      <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+        Elevate Your Food Brand, Restaurant, or Retail Space
+      </h3>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto">
+        Available across Maharashtra for custom brand commercials, culinary lookbooks, social reels, and architectural storefront campaigns.
+      </p>
+      <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+        <a href="https://api.whatsapp.com/send?phone=919892967174&text=Hi%20Abrar%2C%20I%20saw%20your%20Golden%20Desserts%20commercial%20work%20and%20want%20to%20book%20a%20commercial%20photography%20campaign%20for%20my%20business." 
+           target="_blank" rel="noopener" 
+           class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all shadow-xl shadow-brand-gold/30 flex items-center gap-2 hover:scale-105 active:scale-95">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Book Commercial Shoot on WhatsApp</span>
+        </a>
+        <a href="tel:+919892967174" class="px-6 py-3.5 rounded-full text-xs font-mono font-bold tracking-wider text-white bg-white/10 hover:bg-white/15 border border-white/20 rounded-full flex items-center gap-2 transition-all">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>+91 98929 67174</span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================================
+       VIDEO EDITING & POST-PRODUCTION SECTION
+       ========================================================================= -->
+  <section id="editing" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+        <i data-lucide="scissors" class="w-4 h-4"></i>
+        <span>Post-Production Mastery</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+        THE ART OF THE CUT: <span class="gold-gradient-text">VIDEO EDITING</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Great films aren’t just shot—they are sculpted in the edit. We transform raw hours of footage 
+        into rhythmic, high-retention visual stories that capture emotion, hold attention, and elevate your brand.
+      </p>
+    </div>
+
+    <!-- Commercial Video Editing Showcase Spotlight -->
+    <div class="mb-20 max-w-6xl mx-auto p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-brand-card/95 via-brand-dark to-brand-card/90 border border-brand-gold/30 shadow-2xl relative overflow-hidden">
+      <!-- Glow ambient lights -->
+      <div class="absolute -top-32 -left-32 w-80 h-80 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+        
+        <!-- Video Player Column (9:16 Vertical Reel Player) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-[320px] rounded-[32px] p-3 bg-gradient-to-b from-brand-gold/50 via-white/10 to-brand-gold/30 shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(212,175,55,0.25)]">
+            <!-- Screen container with bezel -->
+            <div class="relative rounded-[24px] overflow-hidden bg-black aspect-[9/16] shadow-inner group border border-white/20">
+              <!-- HTML5 Video Player with Autoplay & Sound Toggle -->
+              <video id="commercial-editing-video" 
+                     class="w-full h-full object-cover cursor-pointer" 
+                     playsinline 
+                     autoplay
+                     muted
+                     loop
+                     preload="auto"
+                     poster="assets/portfolio/commercial-video-editing-poster.jpg">
+                <source src="assets/videos/commercial-video-editing-showcase.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+
+              <!-- Sound Toggle Button -->
+              <button id="toggle-sound-btn" class="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-black/80 hover:bg-brand-gold hover:text-brand-black text-white text-[11px] font-mono border border-white/20 backdrop-blur-md transition-all shadow-lg active:scale-95" aria-label="Toggle Sound">
+                <i data-lucide="volume-x" class="w-3.5 h-3.5 sound-icon"></i>
+                <span class="sound-text font-bold">UNMUTE SOUND</span>
+              </button>
+
+              <!-- Live HUD Status -->
+              <div class="absolute top-3 left-3 pointer-events-none flex items-center gap-1.5 bg-black/75 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/15">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+                <span class="text-[9px] font-mono font-bold tracking-widest uppercase text-white">COMMERCIAL EDIT</span>
+              </div>
+
+              <div class="absolute top-3 right-3 pointer-events-none bg-brand-gold text-brand-black px-2 py-0.5 rounded text-[9px] font-mono font-black">
+                9:16 4K
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Description & Post-Production Breakdown Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-brand-gold">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Commercial Video Editing &bull; Director Abrar</span>
+          </div>
+
+          <h3 class="font-serif text-2xl sm:text-4xl font-bold text-white leading-tight">
+            COMMERCIAL VIDEO EDITING & <br>
+            <span class="gold-gradient-text">DYNAMIC REEL CUTS</span>.
+          </h3>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            High-converting commercial video editing built for engagement. We combine narrative pacing, kinetic match cuts, seamless motion graphics, and rich audio design to ensure your audience watches till the final frame.
+          </p>
+
+          <!-- Feature Metric Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 font-mono text-xs">
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Format</div>
+              <div class="text-white font-bold text-sm mt-0.5">9:16 Vertical</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Retention</div>
+              <div class="text-brand-gold font-bold text-sm mt-0.5">High-Velocity</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Sound Mix</div>
+              <div class="text-emerald-400 font-bold text-sm mt-0.5">Custom Foley/SFX</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Color Grade</div>
+              <div class="text-sky-400 font-bold text-sm mt-0.5">DaVinci ACES</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Platform</div>
+              <div class="text-white font-bold text-sm mt-0.5">Reels / Shorts / Ads</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/10">
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">Turnaround</div>
+              <div class="text-brand-gold font-bold text-sm mt-0.5">Fast Delivery</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-4">
+            <a href="https://api.whatsapp.com/send?phone=919892967174&text=Hi%20Abrar%2C%20I%20watched%20your%20commercial%20video%20edit%20and%20want%20to%20hire%20you%20for%20video%20editing%20services." 
+               target="_blank" rel="noopener" 
+               class="px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all shadow-xl shadow-brand-gold/25 flex items-center gap-2 hover:scale-105 active:scale-95">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Book Video Editing</span>
+            </a>
+            <a href="#spec-builder" class="px-6 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-gold/40 text-brand-gold hover:text-white hover:bg-brand-gold/10 transition-all flex items-center gap-2">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              <span>Customize Package</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- The Beyond Frames Post-Production Suite Visualizer -->
+    <div class="max-w-5xl mx-auto p-6 sm:p-8 rounded-2xl bg-brand-card border border-brand-gold/30 shadow-2xl relative overflow-hidden">
+      <!-- Ambient Gold Glow -->
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Suite Header Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-white/10 gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+          <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+          <span class="text-xs font-mono text-slate-400 pl-2">BeyondFrames_MasterCut_4K.prproj &bull; 3840&times;2160 &bull; 24fps</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-semibold text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/30 w-fit">
+          <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          <span>Multi-Format 4K & Vertical Ready</span>
+        </div>
+      </div>
+
+      <!-- Visual Timeline Tracks Demonstration -->
+      <div class="relative overflow-hidden pt-6 rounded-xl">
+        <!-- NLE Playhead Scrubber Line -->
+        <div class="timeline-playhead-line">
+          <div class="timeline-playhead-head"></div>
+        </div>
+
+        <div class="space-y-3 font-mono text-xs">
+        
+        <!-- Track 1: Narrative & B-Roll -->
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-dark border border-white/10">
+          <div class="w-16 text-[10px] uppercase font-bold text-slate-400 flex items-center gap-1.5 shrink-0">
+            <i data-lucide="video" class="w-3.5 h-3.5 text-brand-gold"></i>
+            <span>V3 &bull; B-ROLL</span>
+          </div>
+          <div class="flex-1 flex gap-2 overflow-hidden h-8 items-center">
+            <div class="h-6 rounded bg-amber-500/20 border border-amber-500/40 px-3 flex items-center text-[11px] text-amber-200 font-sans truncate w-1/3">
+              Cinematic Cutaways & Macro
+            </div>
+            <div class="h-6 rounded bg-amber-500/20 border border-amber-500/40 px-3 flex items-center text-[11px] text-amber-200 font-sans truncate w-1/4">
+              Drone Aerial Establishing
+            </div>
+            <div class="h-6 rounded bg-amber-500/20 border border-amber-500/40 px-3 flex items-center text-[11px] text-amber-200 font-sans truncate flex-1">
+              Match Cuts & Dynamic Motion
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 2: Main Storyline A-Roll -->
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-dark border border-white/10">
+          <div class="w-16 text-[10px] uppercase font-bold text-slate-400 flex items-center gap-1.5 shrink-0">
+            <i data-lucide="film" class="w-3.5 h-3.5 text-sky-400"></i>
+            <span>V2 &bull; STORY</span>
+          </div>
+          <div class="flex-1 flex gap-2 overflow-hidden h-8 items-center">
+            <div class="h-6 rounded bg-sky-500/20 border border-sky-500/40 px-3 flex items-center text-[11px] text-sky-200 font-sans truncate w-1/2">
+              Scene 01: The Hook & Character Intro
+            </div>
+            <div class="h-6 rounded bg-sky-500/20 border border-sky-500/40 px-3 flex items-center text-[11px] text-sky-200 font-sans truncate flex-1">
+              Scene 02: Climax & Emotional Reveal
+            </div>
+          </div>
+        </div>
+
+        <!-- Track 3: Sound Design & Foley -->
+        <div class="flex items-center gap-3 p-3 rounded-xl bg-brand-dark border border-white/10">
+          <div class="w-16 text-[10px] uppercase font-bold text-slate-400 flex items-center gap-1.5 shrink-0">
+            <i data-lucide="volume-2" class="w-3.5 h-3.5 text-emerald-400"></i>
+            <span>A1 &bull; AUDIO</span>
+          </div>
+          <div class="flex-1 flex gap-2 overflow-hidden h-8 items-center">
+            <div class="h-6 rounded bg-emerald-500/20 border border-emerald-500/40 px-3 flex items-center text-[11px] text-emerald-200 font-sans truncate w-1/4">
+              Dialogue Denoise & EQ
+            </div>
+            <div class="h-6 rounded bg-emerald-500/20 border border-emerald-500/40 px-3 flex items-center text-[11px] text-emerald-200 font-sans truncate w-1/3">
+              Custom Risers & Sub-Bass Drops
+            </div>
+            <div class="h-6 rounded bg-emerald-500/20 border border-emerald-500/40 px-3 flex items-center text-[11px] text-emerald-200 font-sans truncate flex-1">
+              Master Score & Soundscape Mix
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+      <!-- Deliverable Format Badges -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 mt-6 border-t border-white/10 text-center">
+        <div class="p-4 rounded-xl bg-brand-dark/70 border border-white/5">
+          <div class="text-brand-gold font-serif font-bold text-sm">16:9 Cinema & YouTube</div>
+          <p class="text-[11px] text-slate-400 mt-1">Full 4K Ultra HD Widescreen Masters with 2.39:1 framing</p>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-dark/70 border border-brand-gold/30">
+          <div class="text-brand-gold font-serif font-bold text-sm">9:16 Instagram Reels & Shorts</div>
+          <p class="text-[11px] text-slate-400 mt-1">Hook-driven vertical edits with animated dynamic subtitles</p>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-dark/70 border border-white/5">
+          <div class="text-brand-gold font-serif font-bold text-sm">4:5 & 1:1 Social Ads</div>
+          <p class="text-[11px] text-slate-400 mt-1">High-converting commercial cuts for feed campaigns</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4 Core Pillars of Beyond Frames Editing -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12 max-w-5xl mx-auto">
+      
+      <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-serif font-bold text-white text-base">Rhythm & Pacing</h3>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          Cutting on the beat, eliminating filler, and building emotional momentum that keeps viewers watching to the final second.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+          <i data-lucide="volume-2" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-serif font-bold text-white text-base">Sound Design (SFX)</h3>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          More than 50% of the cinematic feel is audio. Layered whooshes, atmospheric textures, and balanced dialogue leveling.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+          <i data-lucide="type" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-serif font-bold text-white text-base">Minimalist Titles</h3>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          Subtle luxury typography, modern lower thirds, and smooth motion graphics that elevate the production value.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+        <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+          <i data-lucide="zap" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-serif font-bold text-white text-base">Fast Turnaround</h3>
+        <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+          Reliable timelines, structured revision cycles, and master file delivery via high-speed cloud drive links.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Quick CTA banner for raw footage -->
+    <div class="mt-12 max-w-5xl mx-auto p-6 rounded-2xl bg-gradient-to-r from-brand-card via-brand-dark to-brand-card border border-brand-gold/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center shrink-0">
+          <i data-lucide="film" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-serif font-bold text-white text-base">Have raw footage that needs professional editing?</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Send us your clips via Google Drive / Dropbox for a fast quote and test edit.</p>
+        </div>
+      </div>
+      <a href="https://wa.me/919892967174?text=Hi%20Beyond%20Frames,%20I%20have%20raw%20footage%20I%20would%20like%20edited!" 
+         target="_blank" 
+         rel="noopener"
+         class="whatsapp-direct-btn whitespace-nowrap px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all flex items-center gap-2 shadow-lg shadow-brand-gold/20">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Send Footage on WhatsApp</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       SERVICES & PACKAGES SECTION
+       ========================================================================= -->
+  <section id="services" class="py-24 bg-brand-dark/70 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+          <i data-lucide="briefcase" class="w-4 h-4"></i>
+          <span>Production Packages</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+          INVESTMENT & <span class="gold-gradient-text">PACKAGES</span>
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Tailored production options designed to maximize brand value, viewer engagement, and visual excellence.
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- PACKAGE 1: Basic Plan -->
+        <div class="service-card flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Essential Package</div>
+            <h3 class="font-display text-2xl font-bold text-white">Basic Plan</h3>
+            <p class="text-xs text-slate-400 mt-2 mb-6">
+              Complete professional event coverage with dual-angle cinema capture, dynamic gimbal motion, and dedicated lighting setup.
+            </p>
+            <div class="text-3xl font-extrabold font-display text-brand-gold mb-6">
+              Starts From ₹8,000
+            </div>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Canon R Series</strong> Professional Camera</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 iPhone 16 Pro Max</strong> With Gimbal</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Porta Light</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Godox LC500</strong> Light</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Full Event Coverage</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Edited Video</strong> (Color-Graded Master)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://api.whatsapp.com/send?phone=919892967174&text=Hi%20Abrar%2C%20I%20am%20interested%20in%20booking%20the%20Basic%20Plan%20(Starts%20From%20%E2%82%B98%2C000)%20for%20my%20event." target="_blank" rel="noopener" class="w-full block text-center py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-brand-gold hover:text-brand-black text-white transition-all font-semibold">
+              Book Basic Plan
+            </a>
+          </div>
+        </div>
+
+        <!-- PACKAGE 2: Professional Plan (POPULAR HIGHLIGHT) -->
+        <div class="service-card flex flex-col justify-between border-brand-gold/60 relative bg-brand-card shadow-2xl">
+          <!-- Popular Pill -->
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest bg-brand-gold text-brand-black shadow-lg">
+            Most Popular
+          </div>
+
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Cinematic Excellence</div>
+            <h3 class="font-display text-2xl font-bold text-white">Professional Plan</h3>
+            <p class="text-xs text-slate-400 mt-2 mb-6">
+              Advanced multi-camera cinematic production with dual gimbals, enhanced lighting, and multiple edited deliverables.
+            </p>
+            <div class="text-3xl font-extrabold font-display text-brand-gold mb-6">
+              Starts From ₹15,000
+            </div>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Sony A7 Mark IV</strong> With Gimbal</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 Canon R Series</strong> Camera</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>1 iPhone 16 Pro Max</strong> With Gimbal</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>2 Porta Lights</strong> (Dual Setup)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Godox LC500</strong> Light</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Full Event Coverage</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>3 Edited Videos</strong> (Master Deliverables)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span class="text-brand-gold font-medium"><strong>Customizations Are Possible</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://api.whatsapp.com/send?phone=919892967174&text=Hi%20Abrar%2C%20I%20am%20interested%20in%20booking%20the%20Professional%20Plan%20(Starts%20From%20%E2%82%B915%2C000)%20for%20my%20event." target="_blank" rel="noopener" class="w-full block text-center py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all shadow-lg shadow-brand-gold/25 font-bold">
+              Book Professional Plan
+            </a>
+          </div>
+        </div>
+
+        <!-- PACKAGE 3: Custom Plan -->
+        <div class="service-card flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Tailored Production</div>
+            <h3 class="font-display text-2xl font-bold text-white">Custom Plan</h3>
+            <p class="text-xs text-slate-400 mt-2 mb-6">
+              The ultimate personalized package tailored to your exact event scale, featuring multi-cam cinema rigs, drone aerials, and full post-production.
+            </p>
+            <div class="text-3xl font-extrabold font-display text-brand-gold mb-6">
+              Custom Quote <span class="text-xs font-normal text-slate-400">/ as per your needs</span>
+            </div>
+
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 border-t border-white/10 pt-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Multi-Cam Setup</strong> (Sony A7 IV + Canon R Series)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>4K Drone Aerials</strong> Cinematography</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>iPhone 16 Pro Max</strong> With Gimbals & Sliders</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Full Lighting Setup</strong> (Porta, Sharpy & LC500 Lights)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Wireless Audio Setup</strong> (Godox / Rode Wireless Mics)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Full Event or Multi-Day</strong> Coverage</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span><strong>Multiple Edited Videos</strong> + 4K Teaser & Social Cuts</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+                <span class="text-brand-gold font-medium"><strong>100% Fully Customizable</strong> As Per Your Budget</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-8">
+            <a href="https://api.whatsapp.com/send?phone=919892967174&text=Hi%20Abrar%2C%20I%20am%20interested%20in%20creating%20a%20Custom%20Plan%20tailored%20for%20my%20event." target="_blank" rel="noopener" class="w-full block text-center py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-brand-gold hover:text-brand-black text-white transition-all font-semibold">
+              Build Custom Plan
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       CREATIVE PROCESS / WORKFLOW
+       ========================================================================= -->
+  <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+        <i data-lucide="git-commit" class="w-4 h-4"></i>
+        <span>Seamless Workflow</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+        THE <span class="gold-gradient-text">BEYOND FRAMES</span> PROCESS
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base">
+        A structured, stress-free creative journey from raw idea to unforgettable master screen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <div class="relative p-6 rounded-2xl bg-brand-card border border-white/10">
+        <div class="text-4xl font-extrabold font-display text-brand-gold/30 mb-4">01</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Discovery & Vision</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          We align on your story, moodboards, shot-lists, location scouting, casting, and aesthetic goals.
+        </p>
+      </div>
+
+      <div class="relative p-6 rounded-2xl bg-brand-card border border-white/10">
+        <div class="text-4xl font-extrabold font-display text-brand-gold/30 mb-4">02</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">The Production</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Lights, camera, cinema. Executed with top-tier camera rigs, precision lighting, and flawless direction.
+        </p>
+      </div>
+
+      <div class="relative p-6 rounded-2xl bg-brand-card border border-white/10">
+        <div class="text-4xl font-extrabold font-display text-brand-gold/30 mb-4">03</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Post & Color Grade</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Editorial cut, sound design, music licensing, and Hollywood-grade DaVinci Resolve color grading.
+        </p>
+      </div>
+
+      <div class="relative p-6 rounded-2xl bg-brand-card border border-white/10">
+        <div class="text-4xl font-extrabold font-display text-brand-gold/30 mb-4">04</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Master Delivery</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          Flawless 4K ProRes masters, social media vertical cuts, high-res photo albums, and archive storage.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       EQUIPMENT & CINEMA GEAR LOCKER (BUILDS MASSIVE CLIENT TRUST)
+       ========================================================================= -->
+  <section id="gear" class="py-24 bg-brand-dark/50 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold mb-2">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Production Arsenal</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+            THE <span class="gold-gradient-text">GEAR LOCKER</span>
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+            We operate cinema-standard equipment engineered for high-stakes broadcast, film festivals, and luxury campaigns.
+          </p>
+        </div>
+        <div class="text-xs font-semibold text-brand-gold uppercase tracking-widest border border-brand-gold/30 px-4 py-2 rounded-full w-fit">
+          100% Redundant Dual-Card Recording
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif font-bold text-white text-base">Cameras & Sensors</h3>
+          <p class="text-[11px] text-brand-gold font-medium mt-1">All types of cameras available in Sony, Canon & Nikon</p>
+          <ul class="text-xs text-slate-300 space-y-2 mt-3">
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span><strong>Sony A7 Mark 4</strong> (Full-Frame Hybrid 4K 60p)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span><strong>Canon R Series</strong> (High-Resolution Mirrorless)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span><strong>Nikon Professional Systems</strong> (Full-Frame Lineup)</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span>10-Bit 4:2:2 Color &bull; Ultra High Dynamic Range</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+            <i data-lucide="aperture" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif font-bold text-white text-base">Optics & Glass</h3>
+          <p class="text-[11px] text-brand-gold font-medium mt-1">High-Speed Primes & Zooms</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 mt-3">
+            <li>&bull; Sony G-Master, Canon L-Series & Nikon Glass</li>
+            <li>&bull; Fast Prime Lenses (24mm, 35mm, 50mm, 85mm f/1.4)</li>
+            <li>&bull; 70-200mm f/2.8 Telephoto Systems</li>
+            <li>&bull; PolarPro QuartzLine Cine VND Filters</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+            <i data-lucide="sun" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif font-bold text-white text-base">Lighting & Audio</h3>
+          <p class="text-[11px] text-brand-gold font-medium mt-1">Studio Lighting & Professional Audio Setup</p>
+          <ul class="text-xs text-slate-300 space-y-2 mt-3">
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span><strong>All Types of Lighting:</strong> Porta Lighting, Sharpy Lights & LC Lights Available</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span><strong>Camera & Mobile Mics:</strong> Godox, Rode & DJI Wireless Systems</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span>High CRI Studio Softboxes, Octas & Diffusers</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-brand-gold font-bold">&bull;</span>
+              <span>Crystal Clear Wireless Audio Recording</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-card border border-white/10 hover:border-brand-gold/40 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center mb-4">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif font-bold text-white text-base">Post-Production Suite</h3>
+          <p class="text-[11px] text-brand-gold font-medium mt-1">High-Speed Video Editing Lab</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 mt-3">
+            <li>&bull; Premiere Pro & DaVinci Resolve Studio</li>
+            <li>&bull; Color-Calibrated 4K Displays</li>
+            <li>&bull; Sound Design & Audio Mastering Suite</li>
+            <li>&bull; Fast NVMe Production Storage</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Interactive Optical Lens & Focal Length Calibration Simulator -->
+      <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-brand-card/90 border border-brand-gold/30 shadow-2xl relative overflow-hidden">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-white/10">
+          <div>
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-brand-gold">
+              <i data-lucide="crosshair" class="w-4 h-4"></i>
+              <span>Studio Lens Calibration Simulator</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1">
+              OPTICAL FOV & DEPTH OF FIELD LAB
+            </h3>
+            <p class="text-xs text-slate-300 mt-1 max-w-xl">
+              Switch between our cinema glass focal lengths to visualize field-of-view compression, maximum iris aperture, and real-time optical characteristics.
+            </p>
+          </div>
+
+          <!-- Focal Length Buttons -->
+          <div class="flex flex-wrap items-center gap-2" id="lens-selector-group">
+            <button class="focal-btn active" data-focal="16">16mm Cine</button>
+            <button class="focal-btn" data-focal="35">35mm Prime</button>
+            <button class="focal-btn" data-focal="50">50mm F/1.2</button>
+            <button class="focal-btn" data-focal="85">85mm Portrait</button>
+            <button class="focal-btn" data-focal="135">135mm Beast</button>
+          </div>
+        </div>
+
+        <!-- Simulator Core Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 items-center">
+          
+          <!-- Optical Diaphragm & Simulated Framing Viewfinder -->
+          <div class="lg:col-span-6 relative aspect-video rounded-xl overflow-hidden border border-brand-gold/40 bg-black flex items-center justify-center group shadow-inner">
+            <!-- Simulated Frame Image with dynamic zoom/blur filter -->
+            <img id="lens-sim-preview" 
+                 src="assets/portfolio/wedding-couple-royal-portrait.jpg" 
+                 alt="Simulated FOV Viewfinder by Director Abrar" 
+                 class="w-full h-full object-cover transition-all duration-700 filter brightness-90">
+            
+            <!-- Viewfinder Crosshairs & Safe Title Overlays -->
+            <div class="absolute inset-4 border border-white/20 pointer-events-none flex items-center justify-center">
+              <div class="w-12 h-12 border border-brand-gold/60 rounded-full flex items-center justify-center">
+                <div class="w-1 h-1 bg-brand-gold rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- Optical Iris Graphic -->
+            <div class="absolute top-4 right-4 w-14 h-14 rounded-full border border-brand-gold/50 bg-black/60 backdrop-blur-md flex items-center justify-center pointer-events-none">
+              <svg class="w-10 h-10 iris-spin-slow text-brand-gold" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="50" cy="50" r="45" stroke-dasharray="4 2"/>
+                <path d="M50 15 L78 35 L70 70 L30 70 L22 35 Z" fill="rgba(212, 175, 55, 0.15)"/>
+                <circle id="lens-sim-aperture-hole" cx="50" cy="50" r="14" fill="black" stroke="#f5cf70" stroke-width="2"/>
+              </svg>
+            </div>
+
+            <!-- Telemetry Stamp -->
+            <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded border border-white/10 font-mono text-[10px] text-brand-gold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span id="lens-sim-hud-focal">16MM T/2.0</span>
+              <span class="text-white/40">|</span>
+              <span id="lens-sim-hud-fov" class="text-white">FOV 107.0°</span>
+            </div>
+          </div>
+
+          <!-- Live Optical Calibration Specs Dashboard -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+            
+            <div class="p-4 rounded-xl bg-brand-dark/80 border border-white/10">
+              <div class="text-[10px] font-mono uppercase text-slate-400 tracking-wider">Field of View (FOV)</div>
+              <div id="lens-spec-fov" class="text-2xl font-mono font-bold text-white mt-1">107° Ultra-Wide</div>
+              <p class="text-[11px] text-slate-400 mt-1">Expansive cinematic environment & architectural depth.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-dark/80 border border-white/10">
+              <div class="text-[10px] font-mono uppercase text-slate-400 tracking-wider">Maximum Iris Aperture</div>
+              <div id="lens-spec-aperture" class="text-2xl font-mono font-bold text-brand-gold mt-1">f/2.8 Ultra-Fast</div>
+              <p class="text-[11px] text-slate-400 mt-1">Crisp low-light performance with broad focal plane.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-dark/80 border border-white/10">
+              <div class="text-[10px] font-mono uppercase text-slate-400 tracking-wider">Bokeh Character & DOF</div>
+              <div id="lens-spec-dof" class="text-base font-mono font-bold text-emerald-400 mt-1">Deep / Infinite Horizon</div>
+              <p class="text-[11px] text-slate-400 mt-1">Foreground to background remain tack-sharp.</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-dark/80 border border-white/10">
+              <div class="text-[10px] font-mono uppercase text-slate-400 tracking-wider">Primary Application</div>
+              <div id="lens-spec-app" class="text-base font-mono font-bold text-sky-400 mt-1">Gimbal & Drone Landscapes</div>
+              <p class="text-[11px] text-slate-400 mt-1">Dynamic sweeps, action pacing, and immersive scale.</p>
+            </div>
+
+            <!-- Signature Acoustic/Optical Note -->
+            <div class="col-span-2 p-3 rounded-lg bg-brand-gold/10 border border-brand-gold/25 flex items-center justify-between text-xs font-mono text-brand-gold">
+              <span class="flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span id="lens-spec-note">Optical Coating: Multi-Layer Nano Cinema Glass &bull; Zero Breathing</span>
+              </span>
+              <span class="text-[10px] uppercase tracking-widest text-white/70">CALIBRATED</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       ABOUT BEYOND FRAMES
+       ========================================================================= -->
+  <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Portrait / Studio Photo with Sleek Viewfinder Treatment -->
+      <div class="lg:col-span-5 relative group">
+        <div class="relative rounded-2xl overflow-hidden border border-brand-gold/40 shadow-[0_0_35px_rgba(212,175,55,0.15)] transition-all duration-500 group-hover:border-brand-gold">
+          <img src="assets/portfolio/commercial-chandelier-ambient-interior.jpg" 
+               alt="Atmospheric light study by Director Abrar" 
+               class="w-full h-[520px] object-cover filter brightness-95 transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-gold">Lead Visionary & Director</div>
+            <div class="font-display text-2xl font-bold text-white flex items-center justify-between">
+              <span>Beyond Frames Studio</span>
+              <span class="text-xs font-mono text-brand-gold bg-black/70 border border-brand-gold/40 px-2.5 py-0.5 rounded-full">DIR. ABRAR</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-1">"Story is king. Light is the poet."</p>
+          </div>
+        </div>
+        <!-- Decorative frame border offset -->
+        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-brand-gold/30 rounded-2xl -z-10 hidden sm:block"></div>
+      </div>
+
+      <!-- Bio / Philosophy -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+          <i data-lucide="user" class="w-4 h-4"></i>
+          <span>The Artist & Philosophy</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white leading-tight">
+          WE DON’T JUST CAPTURE REALITY. <br>
+          <span class="gold-gradient-text">WE ELEVATE IT.</span>
+        </h2>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          At <strong>Beyond Frames</strong>, visual storytelling is more than pressing a shutter or recording 24 frames per second. 
+          It is about seeing the soul behind the subject, orchestrating light and shadow, and crafting an indelible emotional resonance.
+        </p>
+
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Whether we are on set directing a high-energy commercial film, on location capturing intimate portraits, 
+          or deep in the color grading suite sculpting palettes frame-by-frame, our commitment remains singular: 
+          <strong>Uncompromising visual mastery that helps your brand stand undefeated.</strong>
+        </p>
+
+        <!-- Values Badges -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10">
+            <div class="font-display font-bold text-white text-sm">Obsessive Detail</div>
+            <div class="text-[11px] text-slate-400 mt-1">From sub-pixel color to sound design.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10">
+            <div class="font-display font-bold text-white text-sm">Prompt Delivery</div>
+            <div class="text-[11px] text-slate-400 mt-1">Fast, reliable turnarounds without compromise.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10">
+            <div class="font-display font-bold text-white text-sm">Client Centric</div>
+            <div class="text-[11px] text-slate-400 mt-1">Transparent communication & vision alignment.</div>
+          </div>
+        </div>
+
+        <div class="pt-4 flex items-center gap-6">
+          <a href="#contact" class="px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all flex items-center gap-2">
+            <span>Work With Us</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/abrarphotography2010" target="_blank" rel="noopener" class="brand-instagram-link w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 text-slate-300 hover:text-brand-gold border border-white/10 flex items-center justify-center transition-all" title="Instagram: @abrarphotography2010">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 text-slate-300 hover:text-brand-gold border border-white/10 flex items-center justify-center transition-all">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="https://vimeo.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/15 text-slate-300 hover:text-brand-gold border border-white/10 flex items-center justify-center transition-all">
+              <i data-lucide="video" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE PRODUCTION PACKAGE & SPEC CONFIGURATOR
+       ========================================================================= -->
+  <section id="spec-builder" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10 relative">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold">
+        <i data-lucide="cpu" class="w-4 h-4"></i>
+        <span>Director-Level Production Configurator</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white">
+        BUILD YOUR CUSTOM <span class="gold-gradient-text">PRODUCTION PACKAGE</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Select your project genre, shooting timeline, camera arsenal, and delivery requirements. 
+        Our system compiles a technical manifest directly for Director review with zero upfront commitment.
+      </p>
+    </div>
+
+    <!-- Main Configurator Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left Column: Configurator Steps (8 Cols) -->
+      <div class="lg:col-span-7 xl:col-span-8 space-y-8">
+        
+        <!-- Step 1: Project Discipline -->
+        <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-[10px] font-bold">01</span>
+              <span>Project Discipline / Genre</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">SELECT ONE</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1" id="config-genre-group">
+            <button class="spec-chip active" data-genre="Brand Commercial & Corporate Film">
+              <i data-lucide="briefcase" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Brand Commercial</span>
+            </button>
+            <button class="spec-chip" data-genre="Music Video & Visual Art">
+              <i data-lucide="music" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Music Video</span>
+            </button>
+            <button class="spec-chip" data-genre="Wedding Cinema & Pre-Wedding Film">
+              <i data-lucide="heart" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Wedding Cinema</span>
+            </button>
+            <button class="spec-chip" data-genre="Fashion & Editorial Photography">
+              <i data-lucide="camera" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Fashion & Editorial</span>
+            </button>
+            <button class="spec-chip" data-genre="High-Retention Video Editing & Color Grade">
+              <i data-lucide="scissors" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Video Editing & Color</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Production Scale & Duration -->
+        <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-[10px] font-bold">02</span>
+              <span>Production Scale & Shooting Schedule</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">SELECT ONE</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1" id="config-scale-group">
+            <button class="spec-chip" data-scale="Half-Day Shoot (Up to 4-5 Hours)">
+              <i data-lucide="clock" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Half-Day (4–5 Hrs)</span>
+            </button>
+            <button class="spec-chip active" data-scale="Full-Day Intensive Production (8-10 Hours)">
+              <i data-lucide="sun" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Full-Day (8–10 Hrs)</span>
+            </button>
+            <button class="spec-chip" data-scale="Multi-Day Feature Campaign (2+ Days)">
+              <i data-lucide="calendar-days" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Multi-Day Campaign (2+ Days)</span>
+            </button>
+            <button class="spec-chip" data-scale="Remote Post-Production Suite Only">
+              <i data-lucide="monitor" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Post-Production Suite Only</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Studio Gear & Cinema Arsenal (Multi-Select) -->
+        <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-[10px] font-bold">03</span>
+              <span>Camera, Lighting & Audio Setup</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">SELECT MULTIPLE</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1" id="config-gear-group">
+            <button class="spec-chip active" data-gear-item="4K Cinema Rig">
+              <i data-lucide="video" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>4K Cinema Rig</span>
+            </button>
+            <button class="spec-chip active" data-gear-item="4K Drone Aerials">
+              <i data-lucide="plane" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>4K Drone Aerials</span>
+            </button>
+            <button class="spec-chip active" data-gear-item="Studio Lighting Rig">
+              <i data-lucide="sun-medium" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Studio Lighting Rig</span>
+            </button>
+            <button class="spec-chip active" data-gear-item="Wireless Studio Mics">
+              <i data-lucide="mic" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Wireless Mic Audio</span>
+            </button>
+            <button class="spec-chip" data-gear-item="Gimbal & Slider Motion">
+              <i data-lucide="move" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Gimbal & Slider Motion</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 4: Master Deliverables (Multi-Select) -->
+        <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-[10px] font-bold">04</span>
+              <span>Master Deliverables & Formats</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">SELECT MULTIPLE</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1" id="config-deliv-group">
+            <button class="spec-chip active" data-deliv-item="Full 4K Cinema Film">
+              <i data-lucide="film" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Full 4K Cinema Film</span>
+            </button>
+            <button class="spec-chip active" data-deliv-item="Vertical Reels Pack (3-5 Cuts)">
+              <i data-lucide="smartphone" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Vertical Reels Pack (3-5 Cuts)</span>
+            </button>
+            <button class="spec-chip" data-deliv-item="High-Res Graded Stills Album">
+              <i data-lucide="image" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Graded Stills Album</span>
+            </button>
+            <button class="spec-chip" data-deliv-item="60s Cinematic Teaser Trailer">
+              <i data-lucide="play-circle" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>60s Teaser Trailer</span>
+            </button>
+            <button class="spec-chip" data-deliv-item="DaVinci Studio Raw Color Grade">
+              <i data-lucide="palette" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>DaVinci Studio Grade</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 5: Location in Maharashtra -->
+        <div class="p-6 rounded-2xl bg-brand-card/80 border border-white/10 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono uppercase tracking-wider text-brand-gold flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center text-[10px] font-bold">05</span>
+              <span>Shoot Location in Maharashtra</span>
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">SELECT CITY</span>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1" id="config-location-group">
+            <button class="spec-chip active" data-location="Mumbai / Navi Mumbai / Thane">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Mumbai / Navi Mumbai</span>
+            </button>
+            <button class="spec-chip" data-location="Pune / PCMC Region">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Pune / PCMC</span>
+            </button>
+            <button class="spec-chip" data-location="Nashik / Aurangabad">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>Nashik / Aurangabad</span>
+            </button>
+            <button class="spec-chip" data-location="All Over Maharashtra / Outstation">
+              <i data-lucide="navigation" class="w-3.5 h-3.5 chip-icon"></i>
+              <span>All Over Maharashtra</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Live Production Manifest Card (4-5 Cols Sticky) -->
+      <div class="lg:col-span-5 xl:col-span-4 sticky top-28 space-y-4">
+        
+        <div class="manifest-card p-6 rounded-2xl space-y-5">
+          
+          <!-- Manifest Header -->
+          <div class="flex items-center justify-between pb-4 border-b border-white/10">
+            <div class="flex items-center gap-2 font-mono text-xs text-brand-gold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span class="font-bold">MANIFEST: BF-SPEC-2026</span>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-brand-gold/15 border border-brand-gold/30 text-[9px] font-mono uppercase text-brand-gold font-bold">READY</span>
+          </div>
+
+          <!-- Manifest Live Readout Fields -->
+          <div class="space-y-3 font-mono text-xs">
+            <div>
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">01. Selected Discipline</div>
+              <div id="manifest-genre" class="text-white font-bold mt-0.5">Brand Commercial & Corporate Film</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">02. Production Schedule</div>
+              <div id="manifest-scale" class="text-slate-200 mt-0.5">Full-Day Intensive Production (8-10 Hours)</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">03. Gear Setup (<span id="manifest-gear-count">4</span> Selected)</div>
+              <div id="manifest-gear" class="text-slate-300 text-[11px] mt-0.5 leading-relaxed">4K Cinema Rig, 4K Drone Aerials, Studio Lighting, Wireless Audio</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">04. Deliverables (<span id="manifest-deliv-count">2</span> Formats)</div>
+              <div id="manifest-deliv" class="text-slate-300 text-[11px] mt-0.5 leading-relaxed">Full 4K Cinema Film, Vertical Reels Pack (3-5 Cuts)</div>
+            </div>
+
+            <div>
+              <div class="text-[10px] text-slate-400 uppercase tracking-wider">05. Primary Location</div>
+              <div id="manifest-location" class="text-emerald-400 font-bold mt-0.5">Mumbai / Navi Mumbai / Thane</div>
+            </div>
+
+            <div class="pt-2 border-t border-white/10 flex items-center justify-between">
+              <span class="text-[10px] text-slate-400 uppercase">DIRECTOR REVIEW:</span>
+              <span class="text-brand-gold font-bold text-xs">Abrar | Beyond Frames</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp Direct Transmission Button -->
+          <div class="pt-2 space-y-2.5">
+            <a id="manifest-whatsapp-btn" 
+               href="#" 
+               target="_blank" 
+               rel="noopener"
+               class="w-full py-4 px-5 rounded-xl bg-brand-gold hover:bg-brand-goldLight text-brand-black text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl shadow-brand-gold/30 transition-all hover:scale-[1.02] active:scale-[0.98]">
+              <i data-lucide="message-square" class="w-4 h-4 fill-current"></i>
+              <span>Request Quote on WhatsApp</span>
+            </a>
+            
+            <p class="text-[10px] text-center text-slate-400 font-mono">
+              <i data-lucide="lock" class="w-3 h-3 inline text-brand-gold mr-1"></i>
+              Direct connection to +91 98929 67174 &bull; No obligation
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================================
+       BOOKING & INQUIRY FORM (CONVERSION MACHINE)
+       ========================================================================= -->
+  <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Left Column: Contact Info & Value Prop -->
+      <div class="lg:col-span-5 space-y-8">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-brand-gold mb-2">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Let's Create Together</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold tracking-wide text-white leading-tight">
+            BOOK YOUR <br>
+            <span class="gold-gradient-text">NEXT PRODUCTION</span>.
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+            Have an upcoming commercial, film, wedding, fashion campaign, or editing project? 
+            Fill out the inquiry form and our studio will reply with a detailed proposal and availability within 24 hours.
+          </p>
+        </div>
+
+        <!-- Direct Contact Channels -->
+        <div class="space-y-4">
+          
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400">Direct Inquiries</div>
+              <a href="mailto:beyondframess10@gmail.com" class="brand-email-link brand-email-text text-sm sm:text-base font-semibold text-white hover:text-brand-gold transition-colors">
+                beyondframess10@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
+              <i data-lucide="phone-call" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400">Phone & WhatsApp</div>
+              <a href="tel:+919892967174" class="brand-phone-link brand-phone-text text-sm sm:text-base font-semibold text-white hover:text-brand-gold transition-colors">
+                +91 98929 67174
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10 flex items-center gap-4 hover:border-brand-gold/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-500/20 via-pink-500/20 to-purple-500/20 text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30">
+              <i data-lucide="instagram" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400">Official Instagram</div>
+              <a href="https://www.instagram.com/abrarphotography2010" target="_blank" rel="noopener" class="brand-instagram-link text-sm sm:text-base font-semibold text-white hover:text-brand-gold transition-colors flex items-center gap-1.5">
+                <span>@abrarphotography2010</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5 text-brand-gold"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-brand-card border border-white/10 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-slate-400">Studio Location</div>
+              <div class="brand-location-text text-sm font-semibold text-white">
+                Available All Over Maharashtra &bull; Traveling On Demand
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- WhatsApp Direct Chat Button -->
+        <a href="https://wa.me/919892967174?text=Hi%20Beyond%20Frames,%20I%20am%20interested%20in%20booking%20a%20shoot!" 
+           target="_blank" 
+           rel="noopener"
+           class="whatsapp-direct-btn inline-flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-lg shadow-emerald-900/30">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Instant WhatsApp Chat (+91 98929 67174)</span>
+        </a>
+      </div>
+
+      <!-- Right Column: Interactive Form -->
+      <div class="lg:col-span-7">
+        <div class="p-8 sm:p-10 rounded-2xl bg-brand-card border border-white/10 shadow-2xl relative">
+          
+          <!-- Booking Form -->
+          <form id="booking-inquiry-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              
+              <div>
+                <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Full Name / Brand <span class="text-brand-gold">*</span>
+                </label>
+                <input type="text" id="client-name" required placeholder="e.g. John Doe / Nike" 
+                       class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+
+              <div>
+                <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Phone / WhatsApp <span class="text-brand-gold">*</span>
+                </label>
+                <input type="tel" id="client-phone" required placeholder="e.g. +91 98765 43210" 
+                       class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+
+              <div>
+                <label for="client-email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Email Address <span class="text-brand-gold">*</span>
+                </label>
+                <input type="email" id="client-email" required placeholder="e.g. john@example.com" 
+                       class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <div>
+                <label for="project-type" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Project Type <span class="text-brand-gold">*</span>
+                </label>
+                <select id="project-type" required class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+                  <option value="cinematography">Cinematography & Brand Film</option>
+                  <option value="photography">Editorial & Commercial Photography</option>
+                  <option value="music-video">Music Video Production</option>
+                  <option value="color-grading">Post-Production & Color Grading</option>
+                  <option value="wedding-event">Luxury Wedding / Event Cinema</option>
+                  <option value="full-campaign">Full Commercial Media Campaign</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="budget-range" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Estimated Budget Range (INR)
+                </label>
+                <select id="budget-range" class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+                  <option value="15k-35k">₹15,000 – ₹35,000</option>
+                  <option value="35k-75k">₹35,000 – ₹75,000</option>
+                  <option value="75k-150k">₹75,000 – ₹1,50,000</option>
+                  <option value="150k-300k">₹1,50,000 – ₹3,00,000</option>
+                  <option value="300k+">₹3,00,000+</option>
+                  <option value="flexible">Flexible / Custom Scope</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="project-date" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Estimated Shoot Date
+                </label>
+                <input type="date" id="project-date" 
+                       class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+
+              <div>
+                <label for="project-location" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                  Shoot Location / City
+                </label>
+                <input type="text" id="project-location" placeholder="e.g. New York / Studio / Worldwide" 
+                       class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label for="project-details" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Project Vision & Details <span class="text-brand-gold">*</span>
+              </label>
+              <textarea id="project-details" rows="4" required placeholder="Tell us about your brand, story, desired mood, deliverables (e.g. 4K horizontal film + vertical reels), and timeline..." 
+                        class="w-full px-4 py-3 rounded-xl bg-brand-dark border border-white/10 text-white text-sm focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/25 flex items-center justify-center gap-2">
+              <span>Submit Production Inquiry</span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+
+            <div class="text-[11px] text-center text-slate-400">
+              We respect your privacy. No spam. You will hear directly from the studio director.
+            </div>
+          </form>
+
+          <!-- Success Notification (Hidden initially) -->
+          <div id="form-success-message" class="hidden text-center py-10 space-y-4">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto animate-pulse">
+              <i data-lucide="check-check" class="w-8 h-8"></i>
+            </div>
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-[10px] uppercase tracking-widest">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              <span>[ INQUIRY LOGGED & DISPATCHED TO beyondframess10@gmail.com ]</span>
+            </div>
+
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Production Inquiry Received</h3>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+              Your inquiry has been dispatched to <strong>Beyond Frames</strong>. A copy has been delivered to 
+              <span class="text-brand-gold font-mono font-semibold">beyondframess10@gmail.com</span>. 
+              For instant same-day response, chat directly with the Director on WhatsApp!
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a id="form-send-whatsapp-btn" href="#" target="_blank" rel="noopener" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-2 shadow-xl shadow-emerald-900/40 hover:scale-105">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Direct WhatsApp Chat (+91 98929 67174)</span>
+              </a>
+              <a id="form-send-email-btn" href="#" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-white/10 hover:bg-white/15 border border-white/20 text-white transition-all flex items-center justify-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
+                <span>Open in Email App</span>
+              </a>
+              <button id="form-reset-btn" class="w-full sm:w-auto px-5 py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-transparent hover:bg-white/5 border border-white/10 text-slate-400 hover:text-white transition-all">
+                New Inquiry
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="border-t border-white/10 bg-brand-black pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-white/10">
+        
+        <!-- Brand Col -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="focus-bracket w-16 h-16 rounded-2xl overflow-hidden border-2 border-brand-gold/60 shadow-xl shadow-brand-gold/25 shrink-0 bg-black p-0.5">
+              <img src="assets/logo/beyond-frames-official-logo.jpg" alt="Beyond Frames" class="brand-logo-img w-full h-full object-cover rounded-xl">
+            </div>
+            <div>
+              <div class="font-serif font-bold text-xl tracking-[0.22em] text-white">
+                BEYOND <span class="text-brand-gold">FRAMES</span>
+              </div>
+              <div class="text-[8.5px] font-semibold tracking-[0.25em] text-brand-gold uppercase mt-0.5">
+                Photography &bull; Videography &bull; Editing
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            Beyond Frames is a world-class creative production studio. High-impact photography, cinematography, directing, and DaVinci Resolve color grading for brands and visionaries.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/abrarphotography2010" target="_blank" rel="noopener" class="brand-instagram-link w-9 h-9 rounded-full bg-white/5 hover:bg-brand-gold hover:text-black text-slate-400 flex items-center justify-center transition-all" title="Instagram: @abrarphotography2010">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-gold hover:text-black text-slate-400 flex items-center justify-center transition-all">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="https://vimeo.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-gold hover:text-black text-slate-400 flex items-center justify-center transition-all">
+              <i data-lucide="video" class="w-4 h-4"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-gold hover:text-black text-slate-400 flex items-center justify-center transition-all">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white">Disciplines</h4>
+          <ul class="text-xs text-slate-400 space-y-2">
+            <li><a href="#portfolio" class="hover:text-brand-gold transition-colors">Commercial Photography</a></li>
+            <li><a href="#cinematography" class="hover:text-brand-gold transition-colors">Cinematography & Films</a></li>
+            <li><a href="#editing" class="hover:text-brand-gold transition-colors">Video Editing & Post</a></li>
+            <li><a href="#portfolio" class="hover:text-brand-gold transition-colors">Fashion & Lookbooks</a></li>
+            <li><a href="#portfolio" class="hover:text-brand-gold transition-colors">Music Video Direction</a></li>
+          </ul>
+        </div>
+
+        <!-- Studio Info -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white">Production Inquiries</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Available All Over Maharashtra for 2026/2027 campaigns, weddings, commercial shoots, music videos, and editorial features.
+          </p>
+          <div class="text-xs text-brand-gold pt-2 font-medium">
+            Call / WhatsApp: <a href="tel:+919892967174" class="hover:underline text-white font-bold">+91 98929 67174</a>
+          </div>
+          <div class="text-xs text-slate-400 font-medium">
+            Email: <a href="mailto:beyondframess10@gmail.com" class="brand-email-link brand-email-text hover:underline text-slate-300">beyondframess10@gmail.com</a>
+          </div>
+          <div class="text-xs text-slate-400 font-medium">
+            Instagram: <a href="https://www.instagram.com/abrarphotography2010" target="_blank" rel="noopener" class="brand-instagram-link hover:underline text-brand-gold font-mono">@abrarphotography2010</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          &copy; 2026 <strong>BEYOND FRAMES</strong>. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#hero" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+            <span>Back to top</span>
+            <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL 1: CINEMATIC FULLSCREEN LIGHTBOX
+       ========================================================================= -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <div class="lightbox-backdrop absolute inset-0"></div>
+    
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 z-50 text-white/80 hover:text-brand-gold p-2 bg-black/40 hover:bg-black/80 rounded-full backdrop-blur-md transition-all">
+      <i data-lucide="x" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Prev & Next Buttons -->
+    <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-brand-gold p-3 bg-black/40 hover:bg-black/80 rounded-full backdrop-blur-md transition-all">
+      <i data-lucide="chevron-left" class="w-6 h-6"></i>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 text-white/80 hover:text-brand-gold p-3 bg-black/40 hover:bg-black/80 rounded-full backdrop-blur-md transition-all">
+      <i data-lucide="chevron-right" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Lightbox Main Frame -->
+    <div class="relative z-40 max-w-6xl w-full max-h-[90vh] mx-auto px-4 flex flex-col items-center">
+      <div class="relative rounded-lg overflow-hidden border border-white/10 max-h-[75vh] flex items-center justify-center bg-black/80">
+        <img id="lightbox-img" src="" alt="High resolution preview" class="max-h-[75vh] w-auto max-w-full object-contain">
+        <video id="lightbox-video" src="" controls playsinline preload="metadata" class="max-h-[75vh] w-auto max-w-full hidden rounded-lg"></video>
+      </div>
+
+      <!-- Metadata Box -->
+      <div class="w-full max-w-3xl mt-4 bg-brand-card/90 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span id="lightbox-category" class="text-[10px] font-bold uppercase tracking-widest text-brand-gold">Photography</span>
+          <h3 id="lightbox-title" class="font-display font-bold text-white text-lg">Project Title</h3>
+        </div>
+        <div class="text-right sm:text-right text-xs text-slate-400">
+          <div id="lightbox-gear" class="font-medium text-slate-200">Camera & Lens Data</div>
+          <div id="lightbox-client" class="text-[11px] text-slate-400 mt-0.5">Client Production</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- =========================================================================
+       FLOATING AI CREATIVE PRODUCER & BOOK SESSION DOCK (BOTTOM-RIGHT)
+       ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    
+    <!-- AI Creative Producer Floating Trigger -->
+    <button id="ai-producer-trigger-btn" class="ai-producer-trigger" aria-label="Open AI Creative Producer">
+      <div class="ai-producer-beacon">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+      </div>
+      <div class="text-left hidden sm:block">
+        <div class="text-[11px] font-bold tracking-wide text-white flex items-center gap-1.5">
+          <span>AI Creative Producer</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        </div>
+        <div class="text-[9px] font-mono text-brand-gold uppercase tracking-wider">
+          Instant Estimate &amp; Shot Plan
+        </div>
+      </div>
+    </button>
+
+    <!-- Direct Book Session Link -->
+    <a href="#contact" class="hidden md:flex px-5 py-3 rounded-full bg-white/10 hover:bg-white/15 text-white hover:text-brand-gold text-xs font-semibold tracking-wider border border-white/20 backdrop-blur-md shadow-xl transition-all items-center gap-2">
+      <span>Book</span>
+      <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+    </a>
+  </div>
+
+  <!-- =========================================================================
+       AI CREATIVE PRODUCER CHAT DRAWER
+       ========================================================================= -->
+  <div id="ai-producer-drawer">
+    
+    <!-- Header -->
+    <div class="ai-chat-header">
+      <div class="flex items-center gap-3">
+        <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-gold">
+          <i data-lucide="clapperboard" class="w-4 h-4"></i>
+          <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+          <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-red-500"></span>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-white tracking-wide flex items-center gap-2">
+            <span>BEYOND FRAMES AI PRODUCER</span>
+            <span class="text-[9px] font-mono text-brand-gold bg-brand-gold/10 px-1.5 py-0.5 rounded border border-brand-gold/30">v2.6</span>
+          </div>
+          <div class="text-[10px] font-mono text-slate-400">
+            Director Abrar's Virtual Copilot &bull; Maharashtra
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-1">
+        <button id="ai-producer-minimize" class="p-1.5 text-slate-400 hover:text-white rounded-lg transition-colors" title="Close AI Assistant">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Message Stream -->
+    <div id="ai-chat-messages" class="ai-chat-messages">
+      <!-- Welcome Message -->
+      <div class="ai-msg-bubble ai-msg-assistant">
+        <p>👋 <strong>Welcome to Beyond Frames Studio!</strong></p>
+        <p>I am Director Abrar's <strong>AI Creative Producer</strong>. Tell me about your upcoming project (e.g., <em>"Opening a bakery in Pune, need reels and product shots"</em> or <em>"3-day destination wedding in Nashik"</em>), and I will instantly formulate:</p>
+        <ul>
+          <li>Recommended Camera Rig &amp; Lighting Package</li>
+          <li>Director's Shot Treatment &amp; Storyboard Beats</li>
+          <li>Estimated Budget Tier &amp; Turnaround</li>
+        </ul>
+        <p class="text-xs text-slate-400 mt-2">💡 Select a quick project prompt below or type your custom idea:</p>
+      </div>
+    </div>
+
+    <!-- Quick Prompt Pills Bar -->
+    <div class="ai-quick-pills-bar">
+      <button class="ai-quick-pill" data-prompt="I need commercial food photography and reels for my cafe in Maharashtra.">
+        🍔 Food &amp; Cafe Commercial
+      </button>
+      <button class="ai-quick-pill" data-prompt="What packages do you have for wedding and reception cinematography?">
+        💍 Royal Wedding Shoot
+      </button>
+      <button class="ai-quick-pill" data-prompt="Tell me about your 9:16 high-retention commercial video editing services.">
+        🎬 Commercial Video Edit
+      </button>
+      <button class="ai-quick-pill" data-prompt="What camera gear, lenses, and lighting does Director Abrar shoot with?">
+        🎥 Cinema Gear Arsenal
+      </button>
+      <button class="ai-quick-pill" data-prompt="What are your pricing packages and travel terms across Maharashtra?">
+        💰 Pricing &amp; Travel Terms
+      </button>
+    </div>
+
+    <!-- Input Bar -->
+    <form id="ai-chat-form" class="ai-input-bar">
+      <input type="text" id="ai-chat-input" class="ai-input-field" placeholder="Describe your project, budget, or question..." autocomplete="off">
+      <button type="submit" class="ai-send-btn" aria-label="Send Message">
+        <i data-lucide="send" class="w-4 h-4"></i>
+      </button>
+    </form>
+
+  </div>
+
+  <!-- SECRET STUDIO MANAGER (HIDDEN FROM PUBLIC VIEW - OWNER ONLY VIA CTRL+SHIFT+A OR #admin) -->
+  <div id="studio-cms-trigger-wrap" class="fixed bottom-6 left-6 z-40 hidden">
+    <button id="open-studio-cms-btn" class="px-4 py-2.5 rounded-full bg-brand-card/90 hover:bg-brand-dark border border-brand-gold/40 text-slate-300 hover:text-white text-[11px] font-mono tracking-wider shadow-xl flex items-center gap-2 transition-all hover:scale-105 group backdrop-blur-md">
+      <i data-lucide="sliders" class="w-3.5 h-3.5 text-brand-gold"></i>
+      <span class="hidden sm:inline group-hover:text-brand-gold transition-colors">Studio Manager</span>
+    </button>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 4: STUDIO CMS CONTROL DRAWER
+       ========================================================================= -->
+  <div id="studio-cms-drawer" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="cms-backdrop absolute inset-0"></div>
+    
+    <div class="relative z-40 max-w-2xl w-full bg-brand-card border border-brand-gold/50 rounded-2xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto shadow-2xl space-y-6">
+      
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold text-black flex items-center justify-center font-bold">
+            <i data-lucide="settings" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-lg sm:text-xl">Beyond Frames Studio Manager</h3>
+            <p class="text-xs text-brand-gold">Upload your logo, add projects & sync contact info live</p>
+          </div>
+        </div>
+        <button id="close-studio-cms-btn" class="text-slate-400 hover:text-white p-2">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex border-b border-white/10 gap-4 text-xs font-bold uppercase tracking-wider overflow-x-auto pb-1">
+        <button class="cms-tab-btn active pb-2 border-b-2 border-brand-gold text-brand-gold" data-tab="cms-tab-branding">
+          1. Brand Logo
+        </button>
+        <button class="cms-tab-btn pb-2 border-b-2 border-transparent text-slate-400 hover:text-white" data-tab="cms-tab-work">
+          2. + Add Portfolio Work
+        </button>
+        <button class="cms-tab-btn pb-2 border-b-2 border-transparent text-slate-400 hover:text-white" data-tab="cms-tab-contact">
+          3. Contact & WhatsApp
+        </button>
+        <button class="cms-tab-btn pb-2 border-b-2 border-transparent text-slate-400 hover:text-white" data-tab="cms-tab-manage">
+          4. Manage Uploads
+        </button>
+        <button class="cms-tab-btn pb-2 border-b-2 border-transparent text-slate-400 hover:text-white flex items-center gap-1.5" data-tab="cms-tab-inquiries">
+          <span>5. Client Inquiries</span>
+          <span id="cms-inquiries-badge" class="px-1.5 py-0.5 rounded-full text-[9px] bg-brand-gold text-black font-extrabold hidden">0</span>
+        </button>
+      </div>
+
+      <!-- TAB 1: BRAND LOGO -->
+      <div id="cms-tab-branding" class="cms-tab-panel space-y-5">
+        <div class="p-4 rounded-xl bg-brand-dark border border-white/10 space-y-3">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+            Current Active Brand Logo
+          </label>
+          <div class="p-4 rounded-lg bg-black/50 border border-white/10 flex items-center justify-center min-h-[70px]">
+            <img id="cms-logo-preview" src="assets/logo/beyond-frames-official-logo.jpg" alt="Beyond Frames Logo" class="h-16 w-auto rounded-xl border border-brand-gold/40">
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300">
+            Choose Your Logo File (PNG, SVG, or JPG)
+          </label>
+          <input type="file" id="cms-logo-input" accept="image/*" class="w-full text-xs text-slate-300 file:mr-4 file:py-2.5 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-bold file:bg-brand-gold file:text-black hover:file:bg-brand-goldLight cursor-pointer">
+          <p class="text-[11px] text-slate-400">
+            Once selected, your logo immediately replaces all logos across the navigation bar and footer!
+          </p>
+        </div>
+
+        <div class="pt-2 flex justify-between items-center">
+          <button id="cms-logo-reset" class="text-xs text-slate-400 hover:text-brand-gold underline">
+            Restore Default Beyond Frames Logo
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 2: ADD PORTFOLIO WORK -->
+      <div id="cms-tab-work" class="cms-tab-panel hidden space-y-4">
+        <form id="cms-add-work-form" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+              Select Photo / Film Still <span class="text-brand-gold">*</span>
+            </label>
+            <input type="file" id="cms-work-image" accept="image/*" required class="w-full text-xs text-slate-300 file:mr-4 file:py-2.5 file:px-4 file:rounded-full file:border-0 file:text-xs file:font-bold file:bg-brand-gold file:text-black hover:file:bg-brand-goldLight cursor-pointer">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Project Title <span class="text-brand-gold">*</span>
+              </label>
+              <input type="text" id="cms-work-title" required placeholder="e.g. Midnight Horizon" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Category <span class="text-brand-gold">*</span>
+              </label>
+              <select id="cms-work-category" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+                <option value="cinematography">Cinematography</option>
+                <option value="photography">Photography</option>
+                <option value="commercial">Commercial</option>
+                <option value="editing">Post & Grading</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Camera & Gear Used
+              </label>
+              <input type="text" id="cms-work-gear" placeholder="e.g. Sony FX3 &bull; 35mm f/1.4 GM" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Client / Production Name
+              </label>
+              <input type="text" id="cms-work-client" placeholder="e.g. Studio Campaign" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+              Framing Ratio
+            </label>
+            <select id="cms-work-aspect" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+              <option value="aspect-[16/10]">16:10 Standard Cinema Card</option>
+              <option value="aspect-[16/9] sm:col-span-2">16:9 Widescreen Hero Card</option>
+              <option value="aspect-[4/5]">4:5 Vertical Editorial Portrait</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-gold text-black hover:bg-brand-goldLight transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/20">
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span>Add to Live Portfolio</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- TAB 3: CONTACT & WHATSAPP SYNC -->
+      <div id="cms-tab-contact" class="cms-tab-panel hidden space-y-4">
+        <form id="cms-contact-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Business Phone
+              </label>
+              <input type="text" id="cms-phone" value="+91 98929 67174" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                WhatsApp Number (with country code)
+              </label>
+              <input type="text" id="cms-whatsapp" value="919892967174" placeholder="e.g. 919892967174" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Inquiry Email Address
+              </label>
+              <input type="email" id="cms-email" value="beyondframess10@gmail.com" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+                Studio Location / Service Area
+              </label>
+              <input type="text" id="cms-location" value="Available All Over Maharashtra" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+              Official Instagram Profile Link
+            </label>
+            <input type="url" id="cms-instagram" value="https://www.instagram.com/abrarphotography2010" placeholder="https://www.instagram.com/abrarphotography2010" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
+              YouTube / Vimeo Showreel Embed URL
+            </label>
+            <input type="url" id="cms-reel-url" placeholder="https://www.youtube.com/embed/YOUR_ID" class="w-full px-3.5 py-2.5 rounded-lg bg-brand-dark border border-white/10 text-white text-xs focus:outline-none focus:border-brand-gold">
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl text-xs font-bold uppercase tracking-wider bg-brand-gold text-black hover:bg-brand-goldLight transition-all flex items-center justify-center gap-2">
+            <i data-lucide="save" class="w-4 h-4"></i>
+            <span>Save Contact & WhatsApp Info</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- TAB 4: MANAGE UPLOADED WORKS -->
+      <div id="cms-tab-manage" class="cms-tab-panel hidden space-y-4">
+        <div class="text-xs text-slate-300 font-semibold uppercase tracking-wider">
+          Your Uploaded Portfolio Works
+        </div>
+        <div id="cms-uploaded-works-list" class="space-y-2 max-h-60 overflow-y-auto pr-1"></div>
+
+        <div class="pt-4 border-t border-white/10 flex justify-between items-center">
+          <button id="cms-reset-all-btn" class="text-xs text-red-400 hover:text-red-300 underline">
+            Reset Everything to Defaults
+          </button>
+          <button onclick="document.getElementById('studio-cms-drawer').classList.add('hidden')" class="px-5 py-2 rounded-full text-xs font-bold uppercase bg-white/10 hover:bg-white/20 text-white">
+            Done
+          </button>
+        </div>
+      </div>
+
+      <!-- TAB 5: CLIENT INQUIRIES LOG (LOCAL CRM BACKUP) -->
+      <div id="cms-tab-inquiries" class="cms-tab-panel hidden space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-xs text-white font-bold uppercase tracking-wider">Client Inquiries Log</div>
+            <p class="text-[11px] text-slate-400">All website inquiries are backed up here in real time</p>
+          </div>
+          <button id="cms-clear-inquiries-btn" class="text-xs text-red-400 hover:text-red-300 underline">
+            Clear Inquiries
+          </button>
+        </div>
+
+        <div id="cms-inquiries-list" class="space-y-3 max-h-72 overflow-y-auto pr-1">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <div class="p-3 rounded-lg bg-brand-dark/80 border border-brand-gold/30 text-[11px] text-slate-300 space-y-1">
+          <div class="font-bold text-brand-gold flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span>Email & WhatsApp Dispatch Status</span>
+          </div>
+          <p class="text-slate-400">
+            Every submission is emailed directly to <code class="text-white">beyondframess10@gmail.com</code> and prepared for instant WhatsApp messaging to <code class="text-white">+91 98929 67174</code>.
+          </p>
+        </div>
+
+        <div class="pt-2 border-t border-white/10 flex justify-end">
+          <button onclick="document.getElementById('studio-cms-drawer').classList.add('hidden')" class="px-5 py-2 rounded-full text-xs font-bold uppercase bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lucide Icons Activation -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Floating Director's 2.5x Optical Magnifying Loupe -->
+  <div id="directors-loupe">
+    <div class="loupe-telemetry-tag">[ 2.5X SENSOR ZOOM &bull; GRAIN INSPECT ]</div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>

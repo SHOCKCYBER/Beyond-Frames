@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="320" height="60" fill="none">
+  <!-- Framing Brackets (Beyond Frames Icon) -->
+  <g stroke="#E5A950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top-left bracket -->
+    <path d="M12 18 L12 12 L26 12" />
+    <!-- Bottom-right bracket -->
+    <path d="M48 38 L48 44 L34 44" />
+    <!-- Center aperture / shutter motion -->
+    <circle cx="30" cy="28" r="14" stroke="#ffffff" stroke-width="2" stroke-dasharray="2 2" opacity="0.6"/>
+    <circle cx="30" cy="28" r="6" fill="#E5A950" />
+    <!-- Cinematic frame breaking line -->
+    <line x1="8" y1="28" x2="16" y2="28" stroke="#E5A950" stroke-width="2" />
+    <line x1="44" y1="28" x2="52" y2="28" stroke="#E5A950" stroke-width="2" />
+  </g>
+  
+  <!-- Brand Text -->
+  <text x="68" y="32" font-family="'Syne', 'Montserrat', 'Inter', sans-serif" font-size="20" font-weight="800" letter-spacing="4" fill="#FFFFFF">
+    BEYOND
+  </text>
+  <text x="175" y="32" font-family="'Syne', 'Montserrat', 'Inter', sans-serif" font-size="20" font-weight="300" letter-spacing="4" fill="#E5A950">
+    FRAMES
+  </text>
+  
+  <!-- Sub-label -->
+  <text x="69" y="47" font-family="'Inter', sans-serif" font-size="7.5" font-weight="500" letter-spacing="3" fill="#94A3B8">
+    CINEMATOGRAPHY &bull; PHOTOGRAPHY &bull; EDITING
+  </text>
+</svg>
